@@ -1,8 +1,9 @@
-
 package aps;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -31,6 +32,7 @@ public class TelaInicial extends javax.swing.JFrame {
 
         panel__cabecalho = new javax.swing.JPanel();
         barraFerramenta = new javax.swing.JPanel();
+        EventClicked__ShutDown = new javax.swing.JLabel();
         icon__shutDown = new javax.swing.JLabel();
         lbl__Desligar = new javax.swing.JLabel();
         linha__User = new javax.swing.JPanel();
@@ -40,7 +42,6 @@ public class TelaInicial extends javax.swing.JFrame {
         lblNewUser = new javax.swing.JLabel();
         image__window = new javax.swing.JLabel();
         background__Inicial = new javax.swing.JLabel();
-        image__window1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1365, 785));
@@ -69,6 +70,15 @@ public class TelaInicial extends javax.swing.JFrame {
 
         barraFerramenta.setBackground(new java.awt.Color(148, 186, 67));
         barraFerramenta.setLayout(null);
+
+        EventClicked__ShutDown.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        EventClicked__ShutDown.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EventClicked__ShutDownMouseClicked(evt);
+            }
+        });
+        barraFerramenta.add(EventClicked__ShutDown);
+        EventClicked__ShutDown.setBounds(100, 10, 190, 50);
 
         icon__shutDown.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/icon__desligar_1.png"))); // NOI18N
         barraFerramenta.add(icon__shutDown);
@@ -133,11 +143,6 @@ public class TelaInicial extends javax.swing.JFrame {
         getContentPane().add(background__Inicial);
         background__Inicial.setBounds(0, -10, 1365, 785);
 
-        image__window1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/icon__windows.png"))); // NOI18N
-        image__window1.setDisabledIcon(null);
-        getContentPane().add(image__window1);
-        image__window1.setBounds(970, 110, 220, 220);
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -150,11 +155,22 @@ public class TelaInicial extends javax.swing.JFrame {
         //Fim BackGround
     }//GEN-LAST:event_formWindowOpened
 
-    //Evento Clicked da Label Icon User
+    //Evento Clicked da Label Icon User // Ação => Fechar tela Atual, transição para proxima tela
     private void icon__UserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_icon__UserMouseClicked
         this.setVisible(false);
         new TelaNewUser().setVisible(true);
     }//GEN-LAST:event_icon__UserMouseClicked
+
+    //Label invisible que irá possibilitar ao clickar o efeito de Exit
+    private void EventClicked__ShutDownMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EventClicked__ShutDownMouseClicked
+        //Icon Desligar => iconShutDown
+        ImageIcon iconShutDown = new ImageIcon("src/aps/image/icon__desligar_1.png");            
+            //Perguntando ao usuário se realmente deseja sair do sistema 
+            if (JOptionPane.showConfirmDialog(null,"Deseja Desligar ?","Desligamento",JOptionPane.OK_OPTION, JOptionPane.CANCEL_OPTION,iconShutDown) == JOptionPane.OK_OPTION)
+                {
+                    System.exit(0);
+                }          
+    }//GEN-LAST:event_EventClicked__ShutDownMouseClicked
 
     /**
      * @param args the command line arguments
@@ -192,12 +208,12 @@ public class TelaInicial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel EventClicked__ShutDown;
     private javax.swing.JLabel background__Inicial;
     private javax.swing.JPanel barraFerramenta;
     private javax.swing.JLabel icon__User;
     private javax.swing.JLabel icon__shutDown;
     private javax.swing.JLabel image__window;
-    private javax.swing.JLabel image__window1;
     private javax.swing.JLabel lblDescricao1;
     private javax.swing.JLabel lblDescricao2;
     private javax.swing.JLabel lblNewUser;

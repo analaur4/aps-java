@@ -115,6 +115,12 @@ public class TelaDesktop extends javax.swing.JFrame {
         barraFerramenta.setBounds(0, 700, 1365, 50);
 
         icon__Mensegger.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/icon__mensager.png"))); // NOI18N
+        icon__Mensegger.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        icon__Mensegger.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                icon__MenseggerMouseClicked(evt);
+            }
+        });
         getContentPane().add(icon__Mensegger);
         icon__Mensegger.setBounds(30, 30, 50, 60);
 
@@ -135,6 +141,12 @@ public class TelaDesktop extends javax.swing.JFrame {
         background__Desktop.setIcon(background);
         //Fim BackGround
     }//GEN-LAST:event_formWindowOpened
+
+    private void icon__MenseggerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_icon__MenseggerMouseClicked
+        // TODO add your handling code here:
+//        this.setVisible(false);
+        new TelaMensagens().setVisible(true);
+    }//GEN-LAST:event_icon__MenseggerMouseClicked
 
     /**
      * @param args the command line arguments

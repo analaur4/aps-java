@@ -1,12 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package aps;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -33,6 +29,7 @@ public class TelaCapitulos extends javax.swing.JFrame {
     private void initComponents() {
 
         barraFerramenta = new javax.swing.JPanel();
+        EventClicked__ShutDown = new javax.swing.JLabel();
         icon__shutDown = new javax.swing.JLabel();
         lbl__Desligar = new javax.swing.JLabel();
         jPanel__principal = new javax.swing.JPanel();
@@ -54,6 +51,15 @@ public class TelaCapitulos extends javax.swing.JFrame {
 
         barraFerramenta.setBackground(new java.awt.Color(148, 186, 67));
         barraFerramenta.setLayout(null);
+
+        EventClicked__ShutDown.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        EventClicked__ShutDown.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EventClicked__ShutDownMouseClicked(evt);
+            }
+        });
+        barraFerramenta.add(EventClicked__ShutDown);
+        EventClicked__ShutDown.setBounds(100, 10, 180, 50);
 
         icon__shutDown.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/icon__desligar_1.png"))); // NOI18N
         barraFerramenta.add(icon__shutDown);
@@ -102,6 +108,7 @@ public class TelaCapitulos extends javax.swing.JFrame {
         jRadioButton1__Cap1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         jRadioButton1__Cap1.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton1__Cap1.setText("Capitulo 01");
+        jRadioButton1__Cap1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jRadioButton1__Cap1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jRadioButton1__Cap1MouseClicked(evt);
@@ -132,12 +139,23 @@ public class TelaCapitulos extends javax.swing.JFrame {
         background__Capitulos.setIcon(background);
         //Fim BackGround
     }//GEN-LAST:event_formWindowOpened
-
+    //Evento Clicked da Label Icon User // Ação => Fechar tela Atual, transição para proxima tela
     private void jRadioButton1__Cap1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton1__Cap1MouseClicked
         // TODO add your handling code here:
         this.setVisible(false);
         new TelaDesktop().setVisible(true);
     }//GEN-LAST:event_jRadioButton1__Cap1MouseClicked
+
+    //Label invisible que irá possibilitar ao clickar o efeito de Exit
+    private void EventClicked__ShutDownMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EventClicked__ShutDownMouseClicked
+        //Icon Desligar => iconShutDown
+        ImageIcon iconShutDown = new ImageIcon("src/aps/image/icon__desligar_1.png");            
+            //Perguntando ao usuário se realmente deseja sair do sistema 
+            if (JOptionPane.showConfirmDialog(null,"Deseja Desligar ?","Desligamento",JOptionPane.OK_OPTION, JOptionPane.CANCEL_OPTION,iconShutDown) == JOptionPane.OK_OPTION)
+                {
+                    System.exit(0);
+                }  
+    }//GEN-LAST:event_EventClicked__ShutDownMouseClicked
 
     /**
      * @param args the command line arguments
@@ -175,6 +193,7 @@ public class TelaCapitulos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel EventClicked__ShutDown;
     private javax.swing.JLabel background__Capitulos;
     private javax.swing.JPanel barraFerramenta;
     private javax.swing.JLabel icon__shutDown;

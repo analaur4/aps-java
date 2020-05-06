@@ -1,12 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package aps;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -33,16 +29,19 @@ public class TelaNewUser extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         barraFerramenta = new javax.swing.JPanel();
+        EventClicked__ShutDown = new javax.swing.JLabel();
         icon__shutDown = new javax.swing.JLabel();
         lbl__Desligar = new javax.swing.JLabel();
         jPanel__principal = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        input1 = new javax.swing.JTextField();
+        input1__nome = new javax.swing.JTextField();
         icon__userNew = new javax.swing.JLabel();
         lbl__nome = new javax.swing.JLabel();
-        btn__salvar = new javax.swing.JButton();
+        lbl__nome1 = new javax.swing.JLabel();
+        btn__salvar = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -61,26 +60,30 @@ public class TelaNewUser extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(148, 186, 67));
         jPanel1.setPreferredSize(new java.awt.Dimension(1365, 70));
+        jPanel1.setLayout(null);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1365, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/newIcon__plantLogo.png"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(50, 0, 80, 70);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 1365, 70);
+        jPanel1.setBounds(0, 0, 1365, 80);
 
         barraFerramenta.setBackground(new java.awt.Color(148, 186, 67));
         barraFerramenta.setPreferredSize(new java.awt.Dimension(1365, 70));
         barraFerramenta.setLayout(null);
 
+        EventClicked__ShutDown.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        EventClicked__ShutDown.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EventClicked__ShutDownMouseClicked(evt);
+            }
+        });
+        barraFerramenta.add(EventClicked__ShutDown);
+        EventClicked__ShutDown.setBounds(100, 10, 180, 50);
+
         icon__shutDown.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/icon__desligar_1.png"))); // NOI18N
+        icon__shutDown.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         barraFerramenta.add(icon__shutDown);
         icon__shutDown.setBounds(110, 15, 38, 40);
 
@@ -94,7 +97,7 @@ public class TelaNewUser extends javax.swing.JFrame {
         barraFerramenta.setBounds(0, 680, 1365, 70);
 
         jPanel__principal.setBackground(new java.awt.Color(241, 241, 241));
-        jPanel__principal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(116, 170, 67), 4));
+        jPanel__principal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(116, 170, 67), 5));
         jPanel__principal.setLayout(null);
 
         jLabel3.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 26)); // NOI18N
@@ -103,39 +106,54 @@ public class TelaNewUser extends javax.swing.JFrame {
         jPanel__principal.add(jLabel3);
         jLabel3.setBounds(80, 40, 380, 31);
 
-        jLabel4.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 10)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 9)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel4.setText("Ao se registrar, você concorda com os termos de serviços e a política de privacidade .");
+        jLabel4.setText("<html>\nAo se registrar, você concorda com os <strong style=\"color:#A8B75F\"> termos de serviços </strong> e a <strong style=\"color:#A8B75F\"> política de privacidade </strong> .\n</html>");
         jPanel__principal.add(jLabel4);
-        jLabel4.setBounds(10, 340, 520, 40);
+        jLabel4.setBounds(40, 340, 450, 40);
 
-        input1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        input1.setForeground(new java.awt.Color(204, 204, 204));
-        jPanel__principal.add(input1);
-        input1.setBounds(170, 160, 280, 40);
+        input1__nome.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        input1__nome.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel__principal.add(input1__nome);
+        input1__nome.setBounds(200, 180, 280, 40);
 
-        icon__userNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/icon__userNewUser.png"))); // NOI18N
+        icon__userNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/NewIcon__UserNewCinza.png"))); // NOI18N
+        icon__userNew.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        icon__userNew.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                icon__userNewMouseClicked(evt);
+            }
+        });
         jPanel__principal.add(icon__userNew);
-        icon__userNew.setBounds(30, 110, 100, 100);
+        icon__userNew.setBounds(30, 120, 150, 150);
 
-        lbl__nome.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
-        lbl__nome.setText("Nome / Apelido");
+        lbl__nome.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 10)); // NOI18N
+        lbl__nome.setForeground(new java.awt.Color(153, 153, 153));
+        lbl__nome.setText("Digite como desejar ser chamado");
         jPanel__principal.add(lbl__nome);
-        lbl__nome.setBounds(170, 120, 200, 29);
+        lbl__nome.setBounds(200, 220, 170, 13);
 
-        btn__salvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/icon__buttonSalvar.png"))); // NOI18N
+        lbl__nome1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
+        lbl__nome1.setForeground(new java.awt.Color(153, 153, 153));
+        lbl__nome1.setText("Nome / Apelido");
+        jPanel__principal.add(lbl__nome1);
+        lbl__nome1.setBounds(200, 140, 200, 29);
+
+        btn__salvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/newIcon__btn.png"))); // NOI18N
+        btn__salvar.setText("jLabel1");
+        btn__salvar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn__salvar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn__salvarMouseClicked(evt);
             }
         });
         jPanel__principal.add(btn__salvar);
-        btn__salvar.setBounds(170, 260, 190, 50);
+        btn__salvar.setBounds(370, 280, 110, 40);
 
         getContentPane().add(jPanel__principal);
         jPanel__principal.setBounds(400, 160, 530, 380);
 
-        jPanel6.setBackground(new java.awt.Color(58, 97, 25));
+        jPanel6.setBackground(new java.awt.Color(58, 121, 18));
         jPanel6.setPreferredSize(new java.awt.Dimension(4, 240));
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
@@ -152,7 +170,7 @@ public class TelaNewUser extends javax.swing.JFrame {
         getContentPane().add(jPanel6);
         jPanel6.setBounds(735, 120, 240, 5);
 
-        jPanel7.setBackground(new java.awt.Color(58, 97, 25));
+        jPanel7.setBackground(new java.awt.Color(58, 121, 18));
         jPanel7.setPreferredSize(new java.awt.Dimension(4, 240));
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -169,7 +187,7 @@ public class TelaNewUser extends javax.swing.JFrame {
         getContentPane().add(jPanel7);
         jPanel7.setBounds(970, 125, 5, 240);
 
-        jPanel5.setBackground(new java.awt.Color(58, 97, 25));
+        jPanel5.setBackground(new java.awt.Color(58, 121, 18));
         jPanel5.setPreferredSize(new java.awt.Dimension(4, 240));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -186,7 +204,7 @@ public class TelaNewUser extends javax.swing.JFrame {
         getContentPane().add(jPanel5);
         jPanel5.setBounds(365, 575, 240, 5);
 
-        jPanel4.setBackground(new java.awt.Color(58, 97, 25));
+        jPanel4.setBackground(new java.awt.Color(58, 121, 18));
         jPanel4.setPreferredSize(new java.awt.Dimension(4, 240));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -209,7 +227,6 @@ public class TelaNewUser extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        // TODO add your handling code here:
         //Começo BackGround
         ImageIcon background = new ImageIcon("src/aps/image/background__Inicial.png");
         background.setImage(background.getImage().getScaledInstance(1365 ,900, 1));
@@ -220,8 +237,25 @@ public class TelaNewUser extends javax.swing.JFrame {
     private void btn__salvarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn__salvarMouseClicked
         // TODO add your handling code here:
         this.setVisible(false);
-        new TelaCapitulos().setVisible(true);
+        new TelaCapitulos().setVisible(true);       
     }//GEN-LAST:event_btn__salvarMouseClicked
+
+    //Label invisible que irá possibilitar ao clickar o efeito de Exit
+    private void EventClicked__ShutDownMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EventClicked__ShutDownMouseClicked
+        //Icon Desligar => iconShutDown
+        ImageIcon iconShutDown = new ImageIcon("src/aps/image/icon__desligar_1.png");            
+            //Perguntando ao usuário se realmente deseja sair do sistema 
+            if (JOptionPane.showConfirmDialog(null,"Deseja Desligar ?","Desligamento",JOptionPane.OK_OPTION, JOptionPane.CANCEL_OPTION,iconShutDown) == JOptionPane.OK_OPTION)
+                {
+                    System.exit(0);
+                }  
+    }//GEN-LAST:event_EventClicked__ShutDownMouseClicked
+
+    //Event Clicked, que irá abrir a janela de modificação foto de Perfil
+    private void icon__userNewMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_icon__userNewMouseClicked
+        
+        new IconSettings().setVisible(true);
+    }//GEN-LAST:event_icon__userNewMouseClicked
 
     /**
      * @param args the command line arguments
@@ -259,12 +293,14 @@ public class TelaNewUser extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel EventClicked__ShutDown;
     private javax.swing.JPanel barraFerramenta;
     private javax.swing.JLabel blackground__NewUser;
-    private javax.swing.JButton btn__salvar;
+    private javax.swing.JLabel btn__salvar;
     private javax.swing.JLabel icon__shutDown;
     private javax.swing.JLabel icon__userNew;
-    private javax.swing.JTextField input1;
+    private javax.swing.JTextField input1__nome;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
@@ -275,5 +311,6 @@ public class TelaNewUser extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel__principal;
     private javax.swing.JLabel lbl__Desligar;
     private javax.swing.JLabel lbl__nome;
+    private javax.swing.JLabel lbl__nome1;
     // End of variables declaration//GEN-END:variables
 }
