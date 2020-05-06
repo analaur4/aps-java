@@ -29,20 +29,23 @@ public class IconSettings extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jRadioButton9 = new javax.swing.JRadioButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jPanel2 = new javax.swing.JPanel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        jRadioButton9 = new javax.swing.JRadioButton();
+        jRadioButton7 = new javax.swing.JRadioButton();
+        jRadioButton6 = new javax.swing.JRadioButton();
+        jRadioButton5 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -57,62 +60,98 @@ public class IconSettings extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 230, 435, 30);
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/users/94x94/perfil01.png"))); // NOI18N
-        getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(15, 20, 100, 94);
-
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/users/94x94/perfil02.png"))); // NOI18N
-        jRadioButton2.setPreferredSize(new java.awt.Dimension(94, 103));
-        getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(115, 20, 100, 94);
-
-        buttonGroup1.add(jRadioButton3);
-        jRadioButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/users/94x94/perfil03.png"))); // NOI18N
-        getContentPane().add(jRadioButton3);
-        jRadioButton3.setBounds(220, 20, 100, 94);
-
-        buttonGroup1.add(jRadioButton4);
-        jRadioButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/users/94x94/perfil04.png"))); // NOI18N
-        getContentPane().add(jRadioButton4);
-        jRadioButton4.setBounds(320, 20, 100, 94);
-
-        buttonGroup1.add(jRadioButton5);
-        jRadioButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/users/94x94/perfil05.png"))); // NOI18N
-        getContentPane().add(jRadioButton5);
-        jRadioButton5.setBounds(15, 130, 100, 94);
-
-        buttonGroup1.add(jRadioButton6);
-        jRadioButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/users/94x94/perfil06.png"))); // NOI18N
-        getContentPane().add(jRadioButton6);
-        jRadioButton6.setBounds(115, 130, 100, 94);
-
-        buttonGroup1.add(jRadioButton7);
-        jRadioButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/users/94x94/perfil07.png"))); // NOI18N
-        getContentPane().add(jRadioButton7);
-        jRadioButton7.setBounds(220, 130, 100, 94);
-
-        buttonGroup1.add(jRadioButton9);
-        jRadioButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/users/94x94/perfil01.png"))); // NOI18N
-        getContentPane().add(jRadioButton9);
-        jRadioButton9.setBounds(320, 130, 100, 94);
-
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/btn__salvar.png"))); // NOI18N
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(320, 320, 120, 60);
+        jLabel3.setBounds(320, 330, 120, 60);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/btn__cancelar.png"))); // NOI18N
         getContentPane().add(jLabel4);
         jLabel4.setBounds(-3, 320, 120, 60);
+
+        java.awt.GridBagLayout jPanel2Layout = new java.awt.GridBagLayout();
+        jPanel2Layout.columnWeights = new double[] {0.0, 10.0, 0.0, 10.0};
+        jPanel2Layout.rowWeights = new double[] {0.0, 10.0, 0.0, 10.0};
+        jPanel2.setLayout(jPanel2Layout);
+
+        buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/users/94x94/perfil01.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.insets = new java.awt.Insets(1, 0, 1, 0);
+        jPanel2.add(jRadioButton1, gridBagConstraints);
+
+        buttonGroup1.add(jRadioButton3);
+        jRadioButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/users/94x94/perfil03.png"))); // NOI18N
+        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton3ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        jPanel2.add(jRadioButton3, gridBagConstraints);
+
+        buttonGroup1.add(jRadioButton4);
+        jRadioButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/users/94x94/perfil04.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 0;
+        jPanel2.add(jRadioButton4, gridBagConstraints);
+
+        buttonGroup1.add(jRadioButton9);
+        jRadioButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/users/94x94/perfil01.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        jPanel2.add(jRadioButton9, gridBagConstraints);
+
+        buttonGroup1.add(jRadioButton7);
+        jRadioButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/users/94x94/perfil07.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        jPanel2.add(jRadioButton7, gridBagConstraints);
+
+        buttonGroup1.add(jRadioButton6);
+        jRadioButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/users/94x94/perfil06.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 2;
+        jPanel2.add(jRadioButton6, gridBagConstraints);
+
+        buttonGroup1.add(jRadioButton5);
+        jRadioButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/users/94x94/perfil05.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 4;
+        jPanel2.add(jRadioButton5, gridBagConstraints);
+
+        buttonGroup1.add(jRadioButton2);
+        jRadioButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/users/94x94/perfil02.png"))); // NOI18N
+        jRadioButton2.setPreferredSize(new java.awt.Dimension(94, 103));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 0;
+        jPanel2.add(jRadioButton2, gridBagConstraints);
+
+        jScrollPane1.setViewportView(jPanel2);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(10, 10, 420, 220);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/Subtração 2.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 440, 420);
 
-        setBounds(20, 100, 454, 452);
+        setBounds(20, 100, 456, 457);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -156,6 +195,7 @@ public class IconSettings extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
@@ -164,5 +204,6 @@ public class IconSettings extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton6;
     private javax.swing.JRadioButton jRadioButton7;
     private javax.swing.JRadioButton jRadioButton9;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
