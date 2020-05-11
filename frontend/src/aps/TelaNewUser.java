@@ -37,7 +37,7 @@ public class TelaNewUser extends javax.swing.JFrame {
         jPanel__principal = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        input1__nome = new javax.swing.JTextField();
+        input__nome = new javax.swing.JTextField();
         icon__userNew = new javax.swing.JLabel();
         lbl__nome = new javax.swing.JLabel();
         lbl__nome1 = new javax.swing.JLabel();
@@ -49,6 +49,7 @@ public class TelaNewUser extends javax.swing.JFrame {
         blackground__NewUser = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(1365, 785));
         setSize(new java.awt.Dimension(1365, 785));
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -94,7 +95,7 @@ public class TelaNewUser extends javax.swing.JFrame {
         lbl__Desligar.setBounds(160, 15, 190, 42);
 
         getContentPane().add(barraFerramenta);
-        barraFerramenta.setBounds(0, 680, 1365, 70);
+        barraFerramenta.setBounds(0, 700, 1365, 70);
 
         jPanel__principal.setBackground(new java.awt.Color(241, 241, 241));
         jPanel__principal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(116, 170, 67), 5));
@@ -112,10 +113,10 @@ public class TelaNewUser extends javax.swing.JFrame {
         jPanel__principal.add(jLabel4);
         jLabel4.setBounds(40, 340, 450, 40);
 
-        input1__nome.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        input1__nome.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel__principal.add(input1__nome);
-        input1__nome.setBounds(200, 180, 280, 40);
+        input__nome.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        input__nome.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel__principal.add(input__nome);
+        input__nome.setBounds(200, 180, 280, 40);
 
         icon__userNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/NewIcon__UserNewCinza.png"))); // NOI18N
         icon__userNew.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -221,7 +222,7 @@ public class TelaNewUser extends javax.swing.JFrame {
         getContentPane().add(jPanel4);
         jPanel4.setBounds(360, 340, 5, 240);
         getContentPane().add(blackground__NewUser);
-        blackground__NewUser.setBounds(0, 50, 1365, 640);
+        blackground__NewUser.setBounds(0, 50, 1365, 660);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -299,7 +300,7 @@ public class TelaNewUser extends javax.swing.JFrame {
     private javax.swing.JLabel btn__salvar;
     private javax.swing.JLabel icon__shutDown;
     private javax.swing.JLabel icon__userNew;
-    private javax.swing.JTextField input1__nome;
+    private javax.swing.JTextField input__nome;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

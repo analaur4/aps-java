@@ -44,6 +44,7 @@ public class TelaInicial extends javax.swing.JFrame {
         background__Inicial = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(1365, 785));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
@@ -82,16 +83,16 @@ public class TelaInicial extends javax.swing.JFrame {
 
         icon__shutDown.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/icon__desligar_1.png"))); // NOI18N
         barraFerramenta.add(icon__shutDown);
-        icon__shutDown.setBounds(110, 15, 46, 38);
+        icon__shutDown.setBounds(110, 20, 46, 38);
 
         lbl__Desligar.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         lbl__Desligar.setForeground(new java.awt.Color(255, 255, 255));
         lbl__Desligar.setText("Desligar");
         barraFerramenta.add(lbl__Desligar);
-        lbl__Desligar.setBounds(160, 15, 270, 40);
+        lbl__Desligar.setBounds(160, 20, 270, 40);
 
         getContentPane().add(barraFerramenta);
-        barraFerramenta.setBounds(0, 680, 1365, 70);
+        barraFerramenta.setBounds(0, 690, 1365, 80);
 
         linha__User.setBackground(new java.awt.Color(58, 121, 18));
 

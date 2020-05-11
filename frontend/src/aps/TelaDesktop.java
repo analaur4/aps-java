@@ -44,6 +44,7 @@ public class TelaDesktop extends javax.swing.JFrame {
         background__Desktop = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(1365, 785));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
@@ -68,16 +69,16 @@ public class TelaDesktop extends javax.swing.JFrame {
         barraFerramenta__UserConfig.setLayout(barraFerramenta__UserConfigLayout);
         barraFerramenta__UserConfigLayout.setHorizontalGroup(
             barraFerramenta__UserConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, barraFerramenta__UserConfigLayout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
+            .addGroup(barraFerramenta__UserConfigLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
                 .addComponent(user__config, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         barraFerramenta__UserConfigLayout.setVerticalGroup(
             barraFerramenta__UserConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(barraFerramenta__UserConfigLayout.createSequentialGroup()
-                .addComponent(user__config, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 20, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, barraFerramenta__UserConfigLayout.createSequentialGroup()
+                .addComponent(user__config, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         barraFerramenta.add(barraFerramenta__UserConfig);
@@ -106,13 +107,13 @@ public class TelaDesktop extends javax.swing.JFrame {
         hour.setForeground(new java.awt.Color(255, 255, 255));
         hour.setText("17:20");
         barraFerramenta__Hour.add(hour);
-        hour.setBounds(10, 6, 64, 29);
+        hour.setBounds(10, 10, 64, 29);
 
         barraFerramenta.add(barraFerramenta__Hour);
         barraFerramenta__Hour.setBounds(1280, 0, 90, 50);
 
         getContentPane().add(barraFerramenta);
-        barraFerramenta.setBounds(0, 700, 1365, 50);
+        barraFerramenta.setBounds(0, 720, 1365, 50);
 
         icon__Mensegger.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/icon__mensager.png"))); // NOI18N
         icon__Mensegger.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -128,7 +129,7 @@ public class TelaDesktop extends javax.swing.JFrame {
         getContentPane().add(icon__puzzle);
         icon__puzzle.setBounds(30, 110, 50, 60);
         getContentPane().add(background__Desktop);
-        background__Desktop.setBounds(0, 0, 1365, 700);
+        background__Desktop.setBounds(0, 0, 1380, 740);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
