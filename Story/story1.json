@@ -1,0 +1,568 @@
+{
+  "Cena_1_Beat_1_B": {
+    "message": "No bilhete estava que envie uma mensagem rapidamente, também dizia que existia muitas coisas do seu  interesse de algo que com certeza ele iria querer descobrir.",
+    "person": "Hermia",
+    "options": [
+      "Não adicionar o numero do bilhete aos seus contatos.",
+      "Adicionar e Mandar uma mensagem."
+      ],
+    "way": [
+      "Cena_1_Beat_1_A",
+      "Cena_2_beat_2_B"
+      ],
+    "obs": "commands"
+  },
+  
+  "Cena_1_Beat_1_A":{
+    "message": "Você costuma fazer todo mundo esperar, que diz que tem algo importânte para falar com você ou  é um tratamento especial para mim",
+    "person": "Hermia",
+    "options": [
+      "Quem é você?"
+      ],
+    "way": [
+      "Cena_1_beat_2_AA"
+      ],
+    "obs": "outro dia"
+  },
+  
+  "Cena_1_Beat_1":{
+    "message":"O personagem principal está em sua casa é ao entrar encontra uma bilhete em cima da mesa, o que ele considera estanho, pois não vive com ninguém, e você não se lembra de escrever um bilhete ou coloca-lo na mesa", 
+    "person": "Hermia",
+    "options": [
+      "Jogar a bilhete fora, por que não ser nada e você não quer nem saber de nada. E pouco importa como aquele bilhete foi para lá em cima.",
+      "Olhar a bilhete e descobrir o que está escrito nela, e tentar entender, como ela foi para lá, ou por que você a colocou lá em cima."
+      ],
+    "way":[
+      "Cena_1_Beat_1_A",
+      "Cena_1_Beat_1_B"],
+    "obs": "commands"
+  },
+  
+  "Cena_1_beat_2_AA": {
+    "message": "Sou quem lhe envio o bilhete ontem que com certeza você provavelmente ignorou, a vos símios, e então alguma outra pergunta",
+    "person": "Hermia",
+    "options": [
+      "Sim, mas você não respondeu nem a primeira, o que exatamente você quer",
+      "acho que não to entendendo mais nada, ta faltando anti depressivo para você, não tá?"
+      ],
+    "way": [
+      "Cena_1_beat_2_AAA",
+      "Cena_1_beat_2_AAB"],
+    "obs": ""
+  },
+  
+  "Cena_2_beat_2_B": {
+    "message": "",
+    "person": "Hermia",
+    "options": [
+      "Não sei quem você é e pouco me importa, mas na próxima vez que invadir minha casa, vai ter com quem se entender.",
+      "Não sei quem você e por que deixou um bilhete na minha  casa depois de invadi-la. Nem o que você tem que pode me importar. O que existe de tão importante assim?"
+      ],
+    "way": [
+      "Cena_2_beat_1_BA",
+      "Cena_2_beat_1_BB"
+      ],
+    "obs": ""
+  },
+  
+  "Cena_1_beat_2_AAB": {
+    "message": "Claro falta anti-depressivo para mim, e até parece que sou eu que fico remoendo os fantasmas do passado, não é?\n Saiba que eu não preciso da sua compaixão ou de seus anti-depressivos\nMas talvez você precise da minha",
+    "person" : "Hermia",
+    "options": [
+      "Realmente não vejo como seria capaz",
+      "Não sei ainda quem e você, mas sei que você não sabe nada sobre mim."
+    ],
+    "way": [
+      "Cena_1_beat_2_AAAB",
+      "Cena_1_beat_2_AABB"
+      ],
+    "obs": ""
+  },
+  
+  "Cena_2_beat_1_BB":{
+    "message": "É difícil dizer o que é importante, vocês são tão volúveis, são tão idiotas que para mim e difícil te responder. Tem uma dificuldade de aceitar o óbvio, com uma ignorância",
+    "person": "Hermia",
+    "options": [
+      "Você esta me chamando de idiota?",
+      "A que ponto você pretende chegar, com esse joguinhos, vamos não tenho tempo a perder com futilidades.",
+      "Sim, concordo com você mais quais das coisa óbvias você esta falando, existe tantas."
+      ],
+    "way": [
+      "Cena_2_beat_1_BBA",
+      "Cena_2_beat_1_BBB",
+      "Cena_2_beat_1_BBC"
+      ],
+    "obs": ""
+  },
+  
+  "Cena_2_beat_1_BA": {
+    "message": "Você parece irritadinho, mas não sei com o que, sua casa é até que bonitinha",
+    "person": "Hermia",
+    "options": [
+      "Obrigado.",
+      "Por que não vamos direto ao ponto, e você para de enrolação"
+      ],
+    "way": [
+      "Cena_2_beat_1_BAA",
+      "Cena_2_beat_1_BAB"
+      ],
+    "obs": ""
+  },
+  
+  "Cena_1_beat_2_AAA": {
+    "message": "O que exatamente eu quero e que você me ajude, eu preciso de informações da empresa de onde você trabalha.\nSimples, não",
+    "person": "Hermia",
+    "options": [
+      "Tá mas que informações",
+      "E por que exatamente eu faria isto, sabe só para inicio de conversa"
+      ],
+    "way": [
+      "Cena_1_beat_2_AAAA",
+      "Cena_1_beat_2_AAAB"
+      ],
+    "obs": ""
+  }, 
+
+  "Cena_2_beat_1_BAA": {
+    "message": "Por que eu ainda tendo, pelos deuses!\nVamos direto ao assunto, antes que eu me exalte.\nBem simples preciso da sua ajuda",
+    "person": "Hermia",
+    "options": [
+      "Recuso, pedir ajuda depois de ter invadido a casa da pessoa e algo um tanto idiota",
+      "Ajuda para o que exatamente",
+      "Se precisa de ajuda então por que invadiu a minha casa"
+    ],
+    "way": [
+      "Cena_2_beat_1_BAAA",
+      "Cena_2_beat_1_BAAB",
+      "Cena_2_beat_1_BAAA"
+    ],
+    "obs": ""
+  },
+
+  "Cena_2_beat_1_BAB" : {
+    "message": "Tudo bem. já estava ficando enteada de andar em círculos.\nO que eu quero de você é que consiga algumas informações do sua empresa, por enquanto",
+    "person": "Hermia",
+    "options": [
+      "Como por enquanto",
+      "E que informações seriam essas por exemplo",
+      "E o que eu ganho no meio de tudo isso"
+    ],
+    "way": [
+     "Cena_2_beat_1_BABA",
+     "Cena_1_beat_2_AAAA",
+     "Cena_2_beat_1_BABC"
+    ],
+    "obs": ""
+
+  },
+
+  "Cena_1_beat_2_AABB" : {
+    "message": "Talvez só saiba o suficiente, trabalha 9 anos na mesma empresa, a 3 anos perdeu algo muito importante para você, e se sente culpado, ainda mais porque há dez anos você havia perdido uma pessoa o que fazia a perda de 3 anos atrás ser ainda pior.\nE é por isso que eu digo que você vai me ajudar, não acha um bom motivo?",
+    "person" : "Hermia",
+    "options":  [
+      "Quem é você, como sabe disso, não entendo ,por que!!?",
+      "Não sei o que você está falando",
+      "Ainda não vejo nenhum motivo para te ajudar, as coisas do passado, só estão no passado"
+    ],
+    "way":[
+      "Cena_1_beat_2_AABBA",
+      "Cena_1_beat_2_AABBB",
+      "Cena_1_beat_2_AAABB"
+    ],
+    "obs" : ""
+  },
+
+  "Cena_2_beat_1_BBA" : {
+    "message": "Só quis evidenciar a capacidade de aprendizado e observação de pessoas.\nNão entenda a mal isto não foi pessoal",
+    "person": "Hermia",
+    "options" : [
+      "com 'isto' você quer?",
+      "Ta, independentemente o que você quer?"
+    ],
+    "way" : [
+      "Cena_2_beat_1_BBAA",
+      "Cena_1_beat_2_AAA"
+    ],
+    "obs": ""
+    
+  },
+
+  "Cena_2_beat_1_BBB" : {
+    "message" : "Com certeza é melhor irmos ao assunto principal da nossa conversa\nPreciso da sua ajuda",
+    "person": "Hermia",
+    "options" : [
+      "E que informações seriam essas por exemplo",
+      "E o que eu ganho no meio de tudo isso"
+    ],
+    "way" : [
+      "Cena_1_beat_2_AAAA",
+      "Cena_2_beat_1_BABC"
+    ],
+    "obs" : ""
+  },
+
+  "Cena_2_beat_1_BBC" : {
+    "message" : "A esquece não quero nem tentar, mas acredito que já passou da hora de entrarmos no assunto principal",
+    "person": "Hermia",
+    "options" : [
+      "agora que eu acreditava que estávamos progredindo, que decepção.",
+      "Já não era sem tempo"
+    ],
+    "way" : [
+        "Cena_2_beat_1_BBCA",
+        "Cena_2_beat_1_BAAA"
+    ],
+    "obs" : ""
+  },
+
+  "Cena_1_beat_2_AAAA" : {
+    "message" : "informações como fraudes, irregularidades de qualquer tipo, qualquer dado que pareça ser suspeitoso",
+    "person": "Hermia",
+    "options" : [
+      "E por que você precisa disso",
+      "E por que você acredita que a algo irregular na empresa a qual trabalho"
+    ],
+    "way" : [
+      "Cena_1_beat_2_AAAAA",
+      "Cena_1_beat_2_AAAAB"
+    ],
+    "obs" : ""
+  },
+
+  "Cena_1_beat_2_AAAB" : {
+    "message" : "Talvez com os dados que você conseguir você possa ter a redenção de seus pecados",
+        "person": "Hermia",
+        "options" : [
+          "Eu não tenho pecados",
+          "Do que você está falando?"
+        ],
+        "way" : [
+          "Cena_1_beat_2_AAABA",
+          "Cena_1_beat_2_AAABB"
+        ],
+        "obs" : ""
+  },
+
+  "Cena_2_beat_1_BBCA" : {
+    "message" : "NÃO De UMA DE ENGRAÇaDINHO PARA CIMA DE MIM\nTudo bem. já estava ficando enteada de andar em círculos.\nO que eu quero de você é que consiga algumas informações do sua empresa, por enquanto",
+        "person": "Hermia",
+        "options": [
+          "Como por enquanto?",
+          "E que informações seriam essas por exemplo?",
+          "E o que eu ganho no meio de tudo isso?"
+        ],
+        "way": [
+         "Cena_2_beat_1_BABA",
+         "Cena_1_beat_2_AAAA",
+         "Cena_2_beat_1_BABC"
+        ],
+        "obs": ""
+  },
+
+  "Cena_2_beat_1_BAAB" : {
+    "message" : "Eu precisava chamar a sua atenção, dizer que eu tenho meio e que vou usá-los.\nMinha experiência diz que funciona bem na maiorias dos casos, fora alguns cabeças duras por aí",
+        "person": "Hermia",
+        "options" : [
+          "Você chamou minha atenção, que não é grande coisa, mas para?",
+          "Você poderia ter mandado um(a) stripper teria chamado ainda mais minha atenção, anota para próxima"
+        ],
+        "way" : [
+          "Cena_2_beat_1_BAAA",
+          "Cena_2_beat_1_BAABB"
+        ],
+        "obs" : ""
+  },
+
+  "Cena_2_beat_1_BAAA" : {
+    "message" : "Eu necessito de sua ajuda, na empresa onde você, trabalha eu preciso de informações de lá, preciso de informações sobre qualquer coisa que pareça estranha.\nQualquer coisa que parece fora da lei",
+        "person": "Hermia",
+        "options" : [
+          "E por que você precisa disso?",
+          "E por que você acredita que a algo irregular na empresa a qual trabalho?"
+        ],
+        "way" : [
+          "Cena_1_beat_2_AAAAA",
+          "Cena__beat_2_AAAAB"
+        ],
+        "obs" : ""
+  },
+
+  "Cena_2_beat_1_BABA" : {
+    "message" : "Sim, por enquanto, até lhe arrumar uma utilidade melhor, apesar de acreditar difícil",
+        "person": "Hermia",
+        "options" : [
+          "Parece que você acredita que eu vou aceita?",
+          "Saiba que eu tenho muitas utilidades, tá, não lembro nenhuma agora, mas eu tenho"
+        ],
+        "way" : [
+          "Cena_2_beat_1_BABAA",
+          "Cena_2_beat_1_BABAB"
+        ],
+        "obs" : ""
+  },
+
+  "Cena_1_beat_2_AAAAA" : {
+    "message" : "parte dos meus interesses e fazer com que a sua empresa pague pelos crimes que eles cometeram, os detalhes não posso dizer",
+        "person": "Hermia",
+        "options" : [
+          "parece que você tem algo pessoal com a empresa, correto?",
+          "Você sabe que isso e muito, estou um tanto receoso"
+        ],
+        "way" : [
+          "Cena_1_beat_2_AAAAAA",
+          "Cena_1_beat_2_AAAAAB"
+        ],
+        "obs" : ""
+  },
+
+  "Cena_2_beat_1_BABC": {
+    "message" : "A possibilidade de se redimir com o seu passado",
+        "person": "Hermia",
+        "options" : [
+          "Que passado, não entendi mais nada",
+          "Não tenho nada de que me arrependo",
+          "Como se eu me importasse, com o passado"
+        ],
+        "way" : [
+          "Cena_2_beat_1_BABCA",
+          "Cena_1_beat_2_AAABB",
+          "Cena_2_beat_1_BABCC"
+        ],
+        "obs" : ""
+
+  },
+
+  "Cena_2_beat_1_BBAA" : {
+    "message" : "se foi maneira de expressão, não tenho nada contra você, que eu não tenha contra as outras pessoas.",
+        "person": "Hermia",
+        "options" : [
+          "O que você tem contra as pessoas",
+          "sso é um colírio, agrada-me muito, saber que você não tem nada contra mim, só contra todas as outra pessoas"
+        ],
+        "way" : [
+          "Cena_2_beat_1_BBAAA",
+          "Cena_2-beat_1_BBAAB"
+        ],
+        "obs" : ""
+  },
+
+  "Cena_1_beat_2_AABBB" : {
+    "message" : "Seu que a culpa ainda te consome, se não você não guardaria as coisa de sua antiga vida guardadas não é.\nMas você tem uma oportunidade única de fazer algo seja covarde e desiste ou seja um herói e lute",
+        "person": "Hermia",
+        "options" : [
+          "Okay."
+        ],
+        "way" : [
+          "final_Cena_1"
+        ],
+        "obs" : ""
+  },
+
+  "Cena_1_beat_2_AAAAB"  : {
+    "message" : "Eu acredito que a seguinte empresa, esteja trabalhando por baixo dos panos com alguns políticos, e assim encobrindo várias irregularidades",
+        "person": "Hermia",
+        "options" : [
+          "E como você chegou até a isso?",
+          "E você quem parte de alguma organização coda em descobrir esses casos, um jornalista, QUEM É VOCÊ?"
+        ],
+        "way" : [
+          "Cena_1_beat_2_AAAABA",
+          "Cena_1_beat_2_AAAABB"
+        ],
+        "obs" : ""
+  },
+
+  "Cena_1_beat_2_AAABB" : {
+    "message" : "O que você acredita que perdeu, o fato da sua culpa que eu sei que ainda o consome, e se ela não fosse só sua culpa, existisse alguém que realmente é mais culpado que você, e é isso que eu estou oferecendo a você a chance de uma vingança contra todos os culpados.",
+        "person": "Hermia",
+        "options" : [
+          "Eu já esqueci essa história, mesmo o passado só continua no passado, o que está enterrado, enterrado esta",
+          "Então quem SÃO OS VERDADEIROS CULPADOS ME CONTEM, LOGO!!"
+        ],
+        "way" : [
+          "Cena_1_beat_2_AAABBA",
+          "Cena_1_beat_2_AAABBB"
+        ],
+        "obs" : "",
+        "note": "audio"
+  },
+
+  "Cena_1_beat_2_AABBA" : {
+    "message" : "Não tenho como lhe explicar, mais tenho o que lhe oferecer para acalmar",
+        "person": "Hermia",
+        "options" : [
+          ""
+        ],
+        "way" : [
+          "Cena_1_beat_2_AAABB"
+        ],
+        "obs" : "continue"
+  },
+
+  "Cena_1_beat_2_AAABA" : {
+    "message" : "'Não um viaje há 3 anos atrás o que você perdeu foi unicamente culpa do seu descuido tudo, você deveria  ter cuidado.\nApenas viveu sua vida negligenciando tudo que lhe era precioso e no fato de você não ter conseguido se perdoar pelo que tinha perdido antes coisas ocorreram em baixos dos seus dedos, e você perdeu mais, e vai continuar sofrem se continuar assim",
+        "person": "Hermia",
+        "options" : [
+          "Tá, já entendi pare com isso",
+          "Não"
+        ],
+        "way" : [
+          "Cena_1_beat_2_AAABAA",
+          "Cena_1_beat_2_AAABAB"
+        ],
+        "obs" : ""
+  },
+
+  "Cena_2_beat_1_BAABB" : {
+    "message" : "Que maravilha estou falando com uma criança não é, será que não podemos ter uma conversa com o mínimo de civilidade",
+        "person": "Hermia",
+        "options" : [
+          "Claro, que sim baby você tem minha atenção",
+          "talvez",
+          "depende mais parece que só está sendo divertido para você"
+        ],
+        "way" : [
+          "Cena_2_beat_1_BAAA",
+          "Cena_2_beat_1_BAAA",
+          "Cena_2_beat_1_BAABBC"
+        ],
+        "obs" : ""
+  },
+
+  "Cena_2_beat_1_BABAA": {
+    "message" : "Sim eu acredito, é claro \npor ser um bom menino vou te dizer qual é o meu ditado: ''precisamos cuidar de todos, seja ela eu você, formigas, plantas ou joaninhas, com o mesmo amor\nacredito que você já conheça esse não",
+        "person": "Hermia",
+        "options" : [
+          "Não entendo, a que ponto você quer chegar?",
+          "COMO VOCÊ SABE ISSO..."
+        ],
+        "way" : [
+          "Cena_2_beat_1_BABAAA",
+          "Cena_2_beat_1_BABAAB"
+        ],
+        "obs" : ""
+  },
+
+  "Cena_2_beat_1_BABAB" : {
+    "message" : "Então você pode usar todas as suas habilidades para conseguir as informações que eu preciso",
+        "person": "Hermia",
+        "options" : [
+          "Não, Não tenho nenhum interesse com isso",
+          "Okay"
+        ],
+        "way" : [
+          "Cena_1_beat_2_AAAAAAAA",
+          "final_Cena_1"
+        ],
+        "obs" : ""
+  },
+
+  "Cena_2_beat_1_BBAAA" : {
+    "message" : "Sério, egocêntricos e ignorantes, em níveis absurdamente toscos de tão assustadores, mas",
+        "person": "Hermia",
+        "options" : [
+          ""
+        ],
+        "way" : [
+          "Cena_2_beat_1_BAAA"
+        ],
+        "obs" : "continue"
+  },
+
+  "Cena_1_beat_2_AAABBB" : {
+    "message" : "Infelizmente é algo que você tem que descobrir por si, e só vai conseguir isso me ajudando",
+        "person": "Hermia",
+        "options" : [
+          ""
+        ],
+        "way" : [
+          "Cena_2_beat_1_BAAA"
+        ],
+        "obs" : "continue"
+  },
+
+  "Cena_1_beat_2_AAAAAA" : {
+    "message" : "Eu não tenho nós temos, assim como você perdeu coisas importantes para ela eu também perdi",
+        "person": "Hermia",
+        "options" : [
+          "mais eu nunca nada para ela",
+          "o que vocÊ perdeu?"
+        ],
+        "way" : [
+          "Cena_1_beat_2_AAAAAAA",
+          "Cena_1_beat_2_AAAAAAB"
+        ],
+        "obs" : ""
+  },
+
+  "Cena_2_beat_1_BBAAB" : {
+    "message" : "denada, volte sempre, realidade e a serventia da casa",
+        "person": "Hermia",
+        "options" : [
+          "sabe você cansa a minha beleza",
+          "okay, senhorita perfeição"
+        ],
+        "way" : [
+          "Cena_2_beat_1_BBAABA",
+          "Cena_2_beat_1_BBAABB"
+        ],
+        "obs" : ""
+  },
+
+  "Cena_2_beat_1_BABCA" : {
+    "message" : "Existem verdades, que podem de lhe libertar da culpa que o persegue, algo você perdeu a três anos o que causou uma mudança em você.\nse apegou as coisa certas a lembrança do que não volta",
+        "person": "Hermia",
+        "options" : [
+          "Não me importa"
+        ],
+        "way" : [
+          "Cena_2_beat_1_BABCAA"
+        ],
+        "obs" : ""
+  },
+
+  "Cena_1_beat_2_AAAABA" : {
+    "message" : "Tenho acompanhado essa empresa a anos a fio, observei várias irregularidade, mas sem nenhuma prova clara, que pudesse derrubar não só a empresa, mas quem os ajuda também, a se manter ilegais",
+        "person": "Hermia",
+        "options" : [
+          "Mas o que eu ganho com isso, se eu derrubar a empresa, as pessoas a qual conheço e eu estaremos desempregados",
+          "Não sei"
+        ],
+        "way" : [
+          "Cena_1_beat_2_AAAABAA",
+          "Cena_1_beat_2_AAAABAA"
+        ],
+        "obs" : ""
+  }
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+}
