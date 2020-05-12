@@ -1,0 +1,194 @@
+{
+  "1": {
+    "previous": null,
+    "message": null,
+    "name": "Hermia",
+    "options": [
+      "Quem é você?",
+      "Sim, sou eu",
+      "Como conseguiu meu número?"
+    ],
+    "path": [
+      "2",
+      "2",
+      "3"
+    ],
+    "event": 2
+  },
+  "2": {
+    "previous": "1",
+    "message": "Me chamo Hermia, queria falar com você a respeito da empresa onde trabalha, é algo muito sério.",
+    "name": "Hermia",
+    "options": [
+      "Sobre o que se trata?",
+      "E porque exatamente eu teria acesso as informações que deseja?",
+      "Como conseguiu meu número?"
+    ],
+    "path": [
+      "4",
+      "5",
+      "3"
+    ],
+    "event": 1
+  },
+  "3": {
+    "previous": "1",
+    "message": "Me chamo Hermia, e por enquanto não interessa como te localizei, o mais importante agora é, que preciso de você para obter informações sobre a empresa onde você trabalha .",
+    "name": "Hermia",
+    "options": [
+      "Sobre o que se trata?",
+      "E porque exatamente eu teria acesso as informações que deseja ?",
+      "OK, mas eu não te conheço e não posso passar nenhuma informação"
+    ],
+    "path": [
+      "4",
+      "5",
+      "6"
+    ],
+    "event": 1
+  },
+  "4": {
+    "previous":"2",
+    "message": "Preciso de qualquer informação que seja suspeita, irregularidades , fraldes ou até mesmo conversas estranhas entre pessoas do mais alto escalão.",
+    "name": "Hermia",
+    "options": [
+      "E porque você precisa dessas informações?",
+      "Mas como eu teria acesso a essas informações ?",
+      "OK, mas eu não te conheço e não posso passar nenhuma informação"
+    ],
+    "path": [
+      "7",
+      "5",
+      "6"
+    ],
+    "event": 1
+  },
+  "5":{
+    "previous":"2",
+    "message": "Consegui acesso a alguns arquivos de dentro da empresa, mas preciso de ajuda para descriptografar, e é nessa parte que você entra em ação, preciso de suas habilidades para sabe o que tem dentro desses arquivos, e assim descobriremos juntos o que há por trás da empresa .",
+    "name":"Hermia",
+    "options":[
+      "Minhas Habilidades?",
+      "E como você conseguiu esses arquivos? De outro funcionario?",
+      "E porque você precisa dessas informações?"
+    ],
+    "path":[
+      "8",
+      "9",
+      "7"
+    ],
+    "event":1
+  },
+  "6":{
+    "previous":"4",
+    "message":"Mas eu conheço você, apesar de parecer calmo, você quer vingança em relação a perda da sua filha. Você não sabe de quem se vingar mas eu posso te mostrar o caminho.",
+    "name":"Hermia",
+    "options":[
+      "Como sabe sobre a minha filha?",
+      "O acidente de minha filha foi de minha responsabilidade",
+      "Como? como você sabe disso ?"
+    ],
+    "path":[
+      "10",
+      "11",
+      "10"
+    ],
+    "event":1
+  },
+  "7":{
+    "previous":"4",
+    "message":"Meus amigos estão ficando doentes por causa da empresa e as ações dela, ela está afetando minha casa e já chegou a me ferir, chegou a hora de alguém agir contra isso. Mas preciso de ajuda, preciso de você . E tenho certeza que você irá me ajudar, afinal o assunto em questão vai muito mais fundo que você pensa, envolvendo até mesmo sua filha.",
+    "name":"Hermia",
+    "options":[
+      "Tudo bem irei te ajudar",
+      "Como sabe sobre a minha filha?",
+      "O acidente de minha filha foi de minha responsabilidade."
+    ],
+    "path":[
+      "12",
+      "10",
+      "11"
+    ],
+    "event":1
+  },
+  "8":{
+    "previous":"5",
+    "message":"Apesar de saber muita coisa, não consigo agir sozinha, preciso de alguém ao meu lado. E tenho certeza de que você irá me ajudar, afinal o assunto em questão vai muito mais fundo do que você pensa, envolvendo até mesmo sua filha .",
+    "name":"Hermia",
+    "options":[
+      "Tudo bem irei te ajudar",
+      "Como sabe sobre a minha filha?",
+      "O acidente de minha filha foi de minha responsabilidade"
+    ],
+    "path":[
+      "12",
+      "10",
+      "11"
+    ],
+    "event":1
+  },
+  "9":{
+    "previous":"5",
+    "message":"Sim, entrei e tenho muitos contatos proximos, assim como estou falando com você agora, cada um com suas habilidades que necessito, e você tem uma habilidade que preciso e muito agora. Bom tenho certeza que você irá me ajudar, afinal o assunto em questão vai muito mais fundo que você pensar. envolvendo até mesmo sua filha.",
+    "name":"Hermia",
+    "options":[
+      "Tudo irei te ajudar",
+      "como sabe sobre a minha filha?",
+      "O acidente de minha filha foi de minha responsabilidade"
+    ],
+    "path":[
+      "12",
+      "10",
+      "11"
+    ],
+    "event":1
+  },
+  "10":{
+    "previous":"6",
+    "message":"Eu sei que você esteve errado todos esses anos. E agora estou aqui, como uma luz em sua própria escuridão, para te mostrar o que realmente aconteceu. Para isso preciso de sua ajudar, é agora ou nunca. Essa é a sua chance de fazer a diferença e descobrir afinal o que houve naquela noite .",
+    "name":"Hermia",
+    "options":[
+      "Tudo bem, eu irei te ajudar",
+      "Não, chega de tudo isso, ponto final",
+      "Certo, por onde começamos?"
+    ],
+    "path":[
+      "12",
+      "13",
+      "12"
+    ],
+    "event":1
+  },
+  "11":{
+    "previous":"6",
+    "message":"Esse é meu dom saber sobre as pessoas, mas preciso delas para agirem por mim. Igual estou aqui diante a você pedindo sua ajuda para investigar por mim e achar as devidas respostas . Tenho certas limitações, e é onde você entrará para me ajudar. E te prometo trazer respostas sobre o responsável pelo que houve com a sua filha.",
+    "name":"Hermia",
+    "options":[
+      "Não quero tocar nesse assunto, e não irei ter ajudar nessa sua missão sem fim.",
+      "Não tem culpado, apenas a mim, eu me descuidei",
+      "Certo, por onde começamos?"
+    ],
+    "path":[
+      "13",
+      "10",
+      "12"
+    ],
+    "event":1
+  },
+  "12":{
+    "previous":null,
+    "message":"Jogador irá ajudar",
+    "name":null,
+    "options":null,
+    "path":null,
+    "event":3
+  },
+  "13":{
+    "previous":null,
+    "message":"Irei procurar outra pessoa para me ajudar, e você ficará nessa escuridão para sempre, enquanto logo debaixo de seus pés a verdade sempre esteve ali. Adeus .",
+    "name":"Hermia",
+    "options":null,
+    "path":null,
+    "event":4
+  }
+}
