@@ -299,7 +299,7 @@ public class TelaNewUser extends javax.swing.JFrame {
     private javax.swing.JLabel blackground__NewUser;
     private javax.swing.JLabel btn__salvar;
     private javax.swing.JLabel icon__shutDown;
-    private javax.swing.JLabel icon__userNew;
+    public javax.swing.JLabel icon__userNew;
     private javax.swing.JTextField input__nome;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -312,6 +312,6 @@ public class TelaNewUser extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel__principal;
     private javax.swing.JLabel lbl__Desligar;
     private javax.swing.JLabel lbl__nome;
-    private javax.swing.JLabel lbl__nome1;
+    public javax.swing.JLabel lbl__nome1;
     // End of variables declaration//GEN-END:variables
 }

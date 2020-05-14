@@ -1,9 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package aps;
+
+import java.awt.Frame;
 
 /**
  *
@@ -28,90 +25,108 @@ public class TelaMensagens extends javax.swing.JFrame {
     private void initComponents() {
 
         AnswerGroup = new javax.swing.ButtonGroup();
-        jPanel3 = new javax.swing.JPanel();
-        Alternativa01 = new javax.swing.JRadioButton();
-        Alternativa02 = new javax.swing.JRadioButton();
-        Alternativa03 = new javax.swing.JRadioButton();
+        jLabel2 = new javax.swing.JLabel();
         btn__Enviar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        Alternativa03 = new javax.swing.JRadioButton();
+        Alternativa02 = new javax.swing.JRadioButton();
+        Alternativa01 = new javax.swing.JRadioButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txt__mensagger = new javax.swing.JTextArea();
+        layout__mensegger = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Mensagens");
         setBackground(new java.awt.Color(255, 255, 255));
         setIconImages(null);
         setMaximumSize(new java.awt.Dimension(0, 0));
+        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(800, 450));
         setSize(new java.awt.Dimension(0, 0));
         setType(java.awt.Window.Type.POPUP);
+        getContentPane().setLayout(null);
 
-        AnswerGroup.add(Alternativa01);
-        Alternativa01.setText("Resposta A");
+        jLabel2.setText("ProfileUser");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(70, 430, 60, 40);
 
-        AnswerGroup.add(Alternativa02);
-        Alternativa02.setText("Resposta B");
+        btn__Enviar.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        btn__Enviar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/btn__enviar.png"))); // NOI18N
+        btn__Enviar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn__Enviar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn__EnviarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn__Enviar);
+        btn__Enviar.setBounds(790, 420, 100, 70);
+
+        jButton1.setText("Fechar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(760, 390, 150, 23);
 
         AnswerGroup.add(Alternativa03);
         Alternativa03.setText("Resposta C");
+        Alternativa03.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(Alternativa03);
+        Alternativa03.setBounds(220, 480, 510, 23);
 
-        btn__Enviar.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        btn__Enviar.setText("Enviar");
+        AnswerGroup.add(Alternativa02);
+        Alternativa02.setText("Resposta B");
+        Alternativa02.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(Alternativa02);
+        Alternativa02.setBounds(220, 440, 510, 23);
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(126, 126, 126)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(Alternativa01)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(Alternativa03)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(Alternativa02)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 375, Short.MAX_VALUE)
-                        .addComponent(btn__Enviar)
-                        .addGap(78, 78, 78))))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(30, Short.MAX_VALUE)
-                .addComponent(Alternativa01)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn__Enviar)
-                    .addComponent(Alternativa02))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Alternativa03)
-                .addGap(29, 29, 29))
-        );
+        AnswerGroup.add(Alternativa01);
+        Alternativa01.setText("Resposta A");
+        Alternativa01.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(Alternativa01);
+        Alternativa01.setBounds(220, 400, 510, 23);
 
+        txt__mensagger.setEditable(false);
         txt__mensagger.setColumns(20);
+        txt__mensagger.setLineWrap(true);
         txt__mensagger.setRows(5);
         jScrollPane1.setViewportView(txt__mensagger);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jScrollPane1)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(11, 30, 990, 335);
 
-        pack();
+        layout__mensegger.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/layout__Mensagger.png"))); // NOI18N
+        getContentPane().add(layout__mensegger);
+        layout__mensegger.setBounds(0, 0, 1011, 540);
+
+        setSize(new java.awt.Dimension(1010, 538));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    //Evento Clicked Button Enviar
+    private void btn__EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn__EnviarActionPerformed
+        if (Alternativa01.isSelected()){
+            txt__mensagger.setText(txt__mensagger.getText() + "Alternativa 1\n" +
+            "	Lorem Ipsum é simplesmente uma simulação de texto \n" +
+            "da indústria tipográfica mplesmente uma simulação de texto \n" +
+            "da indústria tipográfica.\n\n");
+        }else if(Alternativa02.isSelected()){
+            txt__mensagger.setText(txt__mensagger.getText() + "Alternativa 2\n" +
+            "	Lorem Ipsum é simplesmente uma simulação de texto \n" +
+            "da indústria tipográfica mplesmente uma simulação de texto \n" +
+            "da indústria tipográfica.\n\n");            
+        }else if(Alternativa03.isSelected()){
+            txt__mensagger.setText(txt__mensagger.getText() + "Jonathan\n" +
+            "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica mplesmente uma simulação de texto da indústria tipográfica.\n\n");            
+        }
+    }//GEN-LAST:event_btn__EnviarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        this.setState(Frame.ICONIFIED);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,8 +170,10 @@ public class TelaMensagens extends javax.swing.JFrame {
     private javax.swing.JRadioButton Alternativa03;
     private javax.swing.ButtonGroup AnswerGroup;
     private javax.swing.JButton btn__Enviar;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JButton jButton1;
+    public javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel layout__mensegger;
     private javax.swing.JTextArea txt__mensagger;
     // End of variables declaration//GEN-END:variables
 }

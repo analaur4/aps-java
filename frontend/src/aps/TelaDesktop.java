@@ -5,6 +5,7 @@
  */
 package aps;
 
+import java.awt.Frame;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
@@ -85,6 +86,11 @@ public class TelaDesktop extends javax.swing.JFrame {
         barraFerramenta__UserConfig.setBounds(0, 0, 80, 60);
 
         barraFerramenta__nomeMensagger.setBackground(new java.awt.Color(168, 183, 95));
+        barraFerramenta__nomeMensagger.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                barraFerramenta__nomeMensaggerMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout barraFerramenta__nomeMensaggerLayout = new javax.swing.GroupLayout(barraFerramenta__nomeMensagger);
         barraFerramenta__nomeMensagger.setLayout(barraFerramenta__nomeMensaggerLayout);
@@ -148,6 +154,12 @@ public class TelaDesktop extends javax.swing.JFrame {
 //        this.setVisible(false);
         new TelaMensagens().setVisible(true);
     }//GEN-LAST:event_icon__MenseggerMouseClicked
+
+    private void barraFerramenta__nomeMensaggerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barraFerramenta__nomeMensaggerMouseClicked
+        // TODO add your handling code here:
+        new TelaMensagens().setVisible(true);
+//        new TelaMensagens().setExtendedState(TelaMensagens.MAXIMIZED_BOTH);
+    }//GEN-LAST:event_barraFerramenta__nomeMensaggerMouseClicked
 
     /**
      * @param args the command line arguments

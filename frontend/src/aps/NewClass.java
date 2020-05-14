@@ -1,0 +1,59 @@
+package aps;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author UnGui
+ */
+public class NewClass {
+    public static void main(String args[]) {
+        //Instanciando a Tela Splash.
+        SplashScreen obj = new SplashScreen();
+        obj.setVisible(true);
+        //Logo quando iniciado, Desabilitando a Frase "Key Validada Bom Jogo !", para Ativação mais abaixo.
+        obj.lbl__keyValidadaBomJogo.setVisible(false);
+        
+        //Começo Tela Splash Screen -> Loading
+        try {
+            for (int i=0; i<=100; i++)
+            {
+                Thread.sleep(100);
+                obj.Porcentagem__Carregamento.setText(Integer.toString(i)+"%");
+                obj.barra__Progresso.setValue(i);
+            }
+            //Habilitando o Label "Key Validada Bom Jogo !"
+            obj.lbl__keyValidadaBomJogo.setVisible(true);
+            //Desabilitando o Label "Verificando Key".
+            obj.jLabel4.setVisible(false);
+            //Atraso entre a Tela Splash e TelaInicial.
+            Thread.sleep(2000);
+            //Habilitando Tela Inicial e Fechando SplashScreen
+            obj.setVisible(false);
+            new TelaInicial().setVisible(true);
+        } catch (Exception e){
+            JOptionPane.showMessageDialog(null,"Erro no Carregamento, O jogo será Fechado");
+            System.exit(0);
+        }
+        //Começo Tela Splash Screen -> Loading        
+    }
+    //Começo Classe Dados Usuário
+    //Valores Criado
+    private String nome;
+    private String url__profile;
+    //Método Set para Modificar
+    public void setNome(String newNome){
+        this.nome = newNome;
+    }
+    public void setUrl(String newUrl){
+        this.url__profile = newUrl;
+    }
+    //Método Get Para pegar 
+    public String getNome(){
+        return this.nome;
+    }
+    public String getUrl(){
+        return this.url__profile;
+    }
+    //Fim Classe Dados Usuário
+}

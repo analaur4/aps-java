@@ -54,6 +54,11 @@ public class IconSettings extends javax.swing.JFrame {
         previewProfile.setBounds(150, 260, 150, 140);
 
         btn__salvar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn__salvar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn__salvarMouseClicked(evt);
+            }
+        });
         getContentPane().add(btn__salvar);
         btn__salvar.setBounds(340, 330, 100, 50);
 
@@ -234,6 +239,33 @@ public class IconSettings extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.setVisible(false);
     }//GEN-LAST:event_btn__cancelarMouseClicked
+
+    //Event ao clickar btn Salvar
+    private void btn__salvarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn__salvarMouseClicked
+        //Instaciando Classe
+        NewClass dadosUsuario = new NewClass();
+        //Pegando o Caminho do Icon do previewProfile.
+        previewProfile.getIcon();
+        //Agora estamos mandando o novo Icon para Classe Dados Usuário
+        dadosUsuario.setUrl(previewProfile.getIcon().toString());
+        
+        //Começo Modificando Icon Tela New User
+        
+        //Instanciando a TelaNewUser
+        TelaNewUser telaNewUser = new TelaNewUser();
+        //Criando o Objeto Icon, e pegando usando o Método Get na Classe Dados Usuário
+        ImageIcon newProfile = new ImageIcon(dadosUsuario.getUrl());
+        //Modificando o Icon
+        telaNewUser.icon__userNew.setIcon(newProfile);
+        
+//        telaNewUser.lbl__nome1.setText(dadosUsuario.getUrl());
+//        System.out.println(telaNewUser.icon__userNew.getIcon());
+        //Começo BackGround
+
+        //Fim Modificando Icon Tela New User
+        
+//        this.setVisible(false);
+    }//GEN-LAST:event_btn__salvarMouseClicked
 
     /**
      * @param args the command line arguments

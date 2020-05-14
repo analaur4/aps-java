@@ -102,6 +102,7 @@ public class TelaCapitulos extends javax.swing.JFrame {
         jRadioButton3__Cap3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         jRadioButton3__Cap3.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton3__Cap3.setText("Capitulo 03");
+        jRadioButton3__Cap3.setEnabled(false);
         jPanel__principal.add(jRadioButton3__Cap3);
         jRadioButton3__Cap3.setBounds(620, 390, 210, 37);
 
@@ -115,13 +116,14 @@ public class TelaCapitulos extends javax.swing.JFrame {
             }
         });
         jPanel__principal.add(jRadioButton1__Cap1);
-        jRadioButton1__Cap1.setBounds(620, 50, 200, 37);
+        jRadioButton1__Cap1.setBounds(620, 60, 210, 37);
 
         jRadioButton2____Cap2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         jRadioButton2____Cap2.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton2____Cap2.setText("Capitulo 02");
+        jRadioButton2____Cap2.setEnabled(false);
         jPanel__principal.add(jRadioButton2____Cap2);
-        jRadioButton2____Cap2.setBounds(620, 210, 200, 37);
+        jRadioButton2____Cap2.setBounds(620, 220, 210, 37);
 
         getContentPane().add(jPanel__principal);
         jPanel__principal.setBounds(210, 90, 960, 480);
