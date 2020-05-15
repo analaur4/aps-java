@@ -176,19 +176,149 @@
     "event":1
   },
   "12":{
-    "previous":null,
-    "message":"Jogador irá ajudar",
-    "name":null,
-    "options":null,
-    "path":null,
+    "previous":"",
+    "message":"Beleza, vamos começar já com isso. Estou enviando o arquivo.",
+    "name":"Hermia",
+    "options":[
+      "Descriptografar arquivo"
+    ],
+    "path":[
+      "14"
+    ],
     "event":3
   },
   "13":{
-    "previous":null,
+    "previous":"",
     "message":"Irei procurar outra pessoa para me ajudar, e você ficará nessa escuridão para sempre, enquanto logo debaixo de seus pés a verdade sempre esteve ali. Adeus .",
     "name":"Hermia",
-    "options":null,
-    "path":null,
-    "event":4
+    "options":[],
+    "path":[],
+    "event":0
+  },
+  "14":{
+    "previous":"12",
+    "message":"Parabéns por ter conseguido descriptografar o primeiro arquivo. Eu dei uma olhada nas informações e estamos caminhando na direção certa.",
+    "name":"Hermia",
+    "options":[
+      "O que mais tinha no arquivo?",
+      "Tinha algo sobre minha filha?",
+      "Me dê mais detalhes!"
+    ],
+    "path":[
+      "15",
+      "16",
+      "15"
+    ],
+    "event":1
+  },
+  "15":{
+    "previous":"14",
+    "messagem":"Eles invadiram áreas de preservação, desmataram, mataram milhares de animais, construíram em cima de aterros desativados e criaram seus próprios prédios pensando apenas com seu egocentrísmo não respeitando o solo onde estávam. O resultado foi um desabamento que matou centenas de pessoas, que tiveram a causa de sua morte como um 'pequeno acidente'.",
+    "name":"Hermia",
+    "options":[
+      "E ninguém descobriu nada sobre o que estávam escondendo?",
+      "Mas agora essas pessoas poderam ter suas mortes vingadas, correto?",
+      "E a minha filha está envolvida nesta história?"
+    ],
+    "path":[
+      "17",
+      "18",
+      "16"
+    ],
+    "event":1
+  },
+  "16":{
+    "previous":"14",
+    "message":"Vasculhei tudo o que me entregou, mas não encontrei algo que possuísse relação com este fato. A mesma fonte com quem peguei o arquivo anterior está agora atrás de mais provas para dar certeza de que eles têm algo a ver com a morte de sua filha. E eu acredito sim que eles têm algo a ver.",
+    "name":"Hermia",
+    "options":[
+      "E como essas informações estavam escondidas até agora, sem que soubessem de nada?",
+      "Enquanto isso continuemos então com o plano, vingaremos as mortes, correto?",
+      "As coisas me parecem incertas demais, mas como conseguiram escapar de tantas coisas?"
+    ],
+    "path":[
+      "17",
+      "18",
+      "17"
+    ],
+    "event":1
+  },
+  "17":{
+    "previous":"15",
+    "message":"Provalvelmente eles forjaram as provas, para evitar perder dinheiro com isto.",
+    "name":"Hermia",
+    "options":[
+      "Mas com estas provas podemos mudar este cenário, né?",
+      "O que sugere fazermos agora?",
+      "E o que eu preciso fazer agora?"
+    ],
+    "path":[
+      "18",
+      "19",
+      "19"
+    ],
+    "event":1
+  },
+  "18":{
+    "previous":"15",
+    "message":"Correto! Podemos vingar as vidas inocentes que se perderam pelas atrocidades dessas pessoas. E eu sei como faremos isso. Você entregará essas provas para alguém que com certeza nos ajudará, mas isso será no anonimato. Se souberem que foi você, sua vida estará comprometida.",
+    "name":"Hermia",
+    "options":[
+      "E por onde eu começo?",
+      "Eu continuo a te ajudar quando tiver notícias sobre minha filha!",
+      "Isso é arriscado, mas vamos lá."
+    ],
+    "path":[
+      "20",
+      "18",
+      "20"
+    ],
+    "event":1
+  },
+  "19":{
+    "previous":"17",
+    "message":"Você entregará essas provas para alguém que com certeza nos ajudará, mas isso será no anonimato. Se souberem que foi você, sua vida estará comprometida.",
+    "name":"Hermia",
+    "options":[
+      "E por onde eu começo?",
+      "Eu continuo a te ajudar quando tiver notícias sobre minha filha!",
+      "Isso é arriscado, mas vamos lá."
+    ],
+    "path":[
+      "20",
+      "18",
+      "20"
+    ]
+  },
+  "20":{
+    "previous":"",
+    "message":"NOVO CAPÍTULO IRÁ AQUIIIIIIIII",
+    "name":"Hermia",
+    "options":[],
+    "path":[],
+    "event":1
+  },
+  "21":{
+    "previous":"18",
+    "message":"Não posso te dar informações sem as devidas confirmações. Confie em mim, eu acredito que foram eles os culpados.",
+    "name":"Hermia",
+    "options":[
+      "Tudo bem, vamos começar...",
+      "Eu não acho que posso confiar 100% em você, mas ok...",
+      "Cansei disso tudo, você está apenas se aproveitando de mim. Adeus!"
+    ],
+    "path":[
+      "20",
+      "20",
+      "22"    
+    ]
+  },
+  "22":{
+    "previous":"",
+    "message":"Se prefere assim, não lhe forçarei a nada!",
+    "name":"Hermia",
+    "options":[],
+    "path":[],
+    "event":0
   }
 }
