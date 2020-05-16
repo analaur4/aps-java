@@ -1,6 +1,8 @@
 package aps;
 
+import static aps.TelaInicial.profileURL;
 import java.awt.Frame;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -13,6 +15,13 @@ public class TelaMensagens extends javax.swing.JFrame {
      */
     public TelaMensagens() {
         initComponents();
+        
+        //Começo Modificando URL__PROFILE
+//      Aqui estamos colocando o valor salvo na Variavel Global / TelaINICIAL
+        ImageIcon newProfile = new ImageIcon(profileURL);
+        //Modificando o Icon
+        url__profile.setIcon(newProfile);
+        //FIM Modificando URL__PROFILE
     }
 
     /**
@@ -25,7 +34,7 @@ public class TelaMensagens extends javax.swing.JFrame {
     private void initComponents() {
 
         AnswerGroup = new javax.swing.ButtonGroup();
-        jLabel2 = new javax.swing.JLabel();
+        url__profile = new javax.swing.JLabel();
         btn__Enviar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         Alternativa03 = new javax.swing.JRadioButton();
@@ -39,16 +48,12 @@ public class TelaMensagens extends javax.swing.JFrame {
         setTitle("Mensagens");
         setBackground(new java.awt.Color(255, 255, 255));
         setIconImages(null);
-        setMaximumSize(new java.awt.Dimension(0, 0));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(800, 450));
         setSize(new java.awt.Dimension(0, 0));
         setType(java.awt.Window.Type.POPUP);
         getContentPane().setLayout(null);
-
-        jLabel2.setText("ProfileUser");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(70, 430, 60, 40);
+        getContentPane().add(url__profile);
+        url__profile.setBounds(30, 400, 150, 120);
 
         btn__Enviar.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btn__Enviar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/btn__enviar.png"))); // NOI18N
@@ -109,14 +114,10 @@ public class TelaMensagens extends javax.swing.JFrame {
     private void btn__EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn__EnviarActionPerformed
         if (Alternativa01.isSelected()){
             txt__mensagger.setText(txt__mensagger.getText() + "Alternativa 1\n" +
-            "	Lorem Ipsum é simplesmente uma simulação de texto \n" +
-            "da indústria tipográfica mplesmente uma simulação de texto \n" +
-            "da indústria tipográfica.\n\n");
+            "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica mplesmente uma simulação de texto da indústria tipográfica áfica mplesmente uma simulação de texto da indústria tipográfic áfica mplesmente uma simulação de texto da indústria tipográfic áfica mplesmente uma simulação de texto da indústria tipográfic.\n\n");  
         }else if(Alternativa02.isSelected()){
             txt__mensagger.setText(txt__mensagger.getText() + "Alternativa 2\n" +
-            "	Lorem Ipsum é simplesmente uma simulação de texto \n" +
-            "da indústria tipográfica mplesmente uma simulação de texto \n" +
-            "da indústria tipográfica.\n\n");            
+            "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica mplesmente uma simulação de texto da indústria tipográfica.\n\n");            
         }else if(Alternativa03.isSelected()){
             txt__mensagger.setText(txt__mensagger.getText() + "Jonathan\n" +
             "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica mplesmente uma simulação de texto da indústria tipográfica.\n\n");            
@@ -171,9 +172,9 @@ public class TelaMensagens extends javax.swing.JFrame {
     private javax.swing.ButtonGroup AnswerGroup;
     private javax.swing.JButton btn__Enviar;
     private javax.swing.JButton jButton1;
-    public javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel layout__mensegger;
     private javax.swing.JTextArea txt__mensagger;
+    public javax.swing.JLabel url__profile;
     // End of variables declaration//GEN-END:variables
 }

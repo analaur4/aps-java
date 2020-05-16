@@ -1,5 +1,6 @@
 package aps;
 
+import static aps.TelaInicial.profileURL;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -140,6 +141,12 @@ public class TelaCapitulos extends javax.swing.JFrame {
         background.setImage(background.getImage().getScaledInstance(1365 ,900, 1));
         background__Capitulos.setIcon(background);
         //Fim BackGround
+        //Começo Modificando URL__PROFILE
+//      Aqui estamos colocando o valor salvo na Variavel Global / TelaINICIAL
+        ImageIcon newProfile = new ImageIcon(profileURL);
+        //Modificando o Icon
+        user__profile.setIcon(newProfile);
+        //FIM Modificando URL__PROFILE
     }//GEN-LAST:event_formWindowOpened
     //Evento Clicked da Label Icon User // Ação => Fechar tela Atual, transição para proxima tela
     private void jRadioButton1__Cap1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton1__Cap1MouseClicked

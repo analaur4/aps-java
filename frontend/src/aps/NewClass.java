@@ -50,10 +50,10 @@ public class NewClass {
     }
     //Método Get Para pegar 
     public String getNome(){
-        return this.nome;
+        return nome;
     }
     public String getUrl(){
-        return this.url__profile;
+        return url__profile;
     }
     //Fim Classe Dados Usuário
 }

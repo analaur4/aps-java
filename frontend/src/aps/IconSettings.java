@@ -1,5 +1,6 @@
 package aps;
 
+import static aps.TelaInicial.profileURL;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -248,7 +249,8 @@ public class IconSettings extends javax.swing.JFrame {
         previewProfile.getIcon();
         //Agora estamos mandando o novo Icon para Classe Dados Usuário
         dadosUsuario.setUrl(previewProfile.getIcon().toString());
-        
+        System.out.println("Modifiquei");
+        profileURL = dadosUsuario.getUrl();
         //Começo Modificando Icon Tela New User
         
         //Instanciando a TelaNewUser
@@ -257,14 +259,11 @@ public class IconSettings extends javax.swing.JFrame {
         ImageIcon newProfile = new ImageIcon(dadosUsuario.getUrl());
         //Modificando o Icon
         telaNewUser.icon__userNew.setIcon(newProfile);
-        
-//        telaNewUser.lbl__nome1.setText(dadosUsuario.getUrl());
-//        System.out.println(telaNewUser.icon__userNew.getIcon());
-        //Começo BackGround
+        System.out.println("IconSettings get = " + dadosUsuario.getUrl());
 
         //Fim Modificando Icon Tela New User
         
-//        this.setVisible(false);
+        this.setVisible(false);
     }//GEN-LAST:event_btn__salvarMouseClicked
 
     /**

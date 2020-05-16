@@ -1,5 +1,6 @@
 package aps;
 
+import static aps.TelaInicial.profileURL;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -13,6 +14,8 @@ public class TelaNewUser extends javax.swing.JFrame {
     /**
      * Creates new form TelaNewUser
      */
+
+            
     public TelaNewUser() {
         initComponents();
         //Tela Full Screen
@@ -52,6 +55,13 @@ public class TelaNewUser extends javax.swing.JFrame {
         setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(1365, 785));
         setSize(new java.awt.Dimension(1365, 785));
+        addWindowFocusListener(new java.awt.event.WindowFocusListener() {
+            public void windowGainedFocus(java.awt.event.WindowEvent evt) {
+                formWindowGainedFocus(evt);
+            }
+            public void windowLostFocus(java.awt.event.WindowEvent evt) {
+            }
+        });
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
@@ -257,6 +267,14 @@ public class TelaNewUser extends javax.swing.JFrame {
         
         new IconSettings().setVisible(true);
     }//GEN-LAST:event_icon__userNewMouseClicked
+
+    private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
+        NewClass dadosUsuario = new NewClass(); 
+//      Aqui estamos colocando o valor salvo na Variavel Global / TelaINICIAL
+        ImageIcon newProfile = new ImageIcon(profileURL);
+        //Modificando o Icon
+        icon__userNew.setIcon(newProfile);
+    }//GEN-LAST:event_formWindowGainedFocus
 
     /**
      * @param args the command line arguments
