@@ -14,6 +14,7 @@ public class TelaInicial extends javax.swing.JFrame {
     //Variavel Global que não queria ter criado
     //Ajustar Futuramente
     public static String profileURL = "src/aps/image/NewIcon__UserNewCinza.png" ;
+    public static String nameUser = "";
     /**
      * Creates new form TelaInicial
      */

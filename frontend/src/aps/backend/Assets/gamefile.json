@@ -1,0 +1,491 @@
+{
+  "1": {
+    "previous": null,
+    "message": "Olá",
+    "name": "Hermia",
+    "options": [
+      "Quem é você?",
+      "Sim, sou eu",
+      "Como conseguiu meu número?"
+    ],
+    "path": [
+      "2",
+      "2",
+      "3"
+    ],
+    "event": 2
+  },
+  "2": {
+    "previous": "1",
+    "message": "Me chamo Hermia, queria falar com você a respeito da empresa onde trabalha, é algo muito sério.",
+    "name": "Hermia",
+    "options": [
+      "Sobre o que se trata?",
+      "E porque exatamente eu teria acesso as informações que deseja?",
+      "Como conseguiu meu número?"
+    ],
+    "path": [
+      "4",
+      "5",
+      "3"
+    ],
+    "event": 1
+  },
+  "3": {
+    "previous": "1",
+    "message": "Me chamo Hermia, e por enquanto não interessa como te localizei, o mais importante agora é, que preciso de você para obter informações sobre a empresa onde você trabalha .",
+    "name": "Hermia",
+    "options": [
+      "Sobre o que se trata?",
+      "E porque exatamente eu teria acesso as informações que deseja ?",
+      "OK, mas eu não te conheço e não posso passar nenhuma informação"
+    ],
+    "path": [
+      "4",
+      "5",
+      "6"
+    ],
+    "event": 1
+  },
+  "4": {
+    "previous": "2",
+    "message": "Preciso de qualquer informação que seja suspeita, irregularidades , fraldes ou até mesmo conversas estranhas entre pessoas do mais alto escalão.",
+    "name": "Hermia",
+    "options": [
+      "E porque você precisa dessas informações?",
+      "Mas como eu teria acesso a essas informações ?",
+      "OK, mas eu não te conheço e não posso passar nenhuma informação"
+    ],
+    "path": [
+      "7",
+      "5",
+      "6"
+    ],
+    "event": 1
+  },
+  "5": {
+    "previous": "2",
+    "message": "Consegui acesso a alguns arquivos de dentro da empresa, mas preciso de ajuda para descriptografar, e é nessa parte que você entra em ação, preciso de suas habilidades para sabe o que tem dentro desses arquivos, e assim descobriremos juntos o que há por trás da empresa .",
+    "name": "Hermia",
+    "options": [
+      "Minhas Habilidades?",
+      "E como você conseguiu esses arquivos? De outro funcionario?",
+      "E porque você precisa dessas informações?"
+    ],
+    "path": [
+      "8",
+      "9",
+      "7"
+    ],
+    "event": 1
+  },
+  "6": {
+    "previous": "4",
+    "message": "Mas eu conheço você, apesar de parecer calmo, você quer vingança em relação a perda da sua filha. Você não sabe de quem se vingar mas eu posso te mostrar o caminho.",
+    "name": "Hermia",
+    "options": [
+      "Como sabe sobre a minha filha?",
+      "O acidente de minha filha foi de minha responsabilidade",
+      "Como? como você sabe disso ?"
+    ],
+    "path": [
+      "10",
+      "11",
+      "10"
+    ],
+    "event": 1
+  },
+  "7": {
+    "previous": "4",
+    "message": "Meus amigos estão ficando doentes por causa da empresa e as ações dela, ela está afetando minha casa e já chegou a me ferir, chegou a hora de alguém agir contra isso. Mas preciso de ajuda, preciso de você . E tenho certeza que você irá me ajudar, afinal o assunto em questão vai muito mais fundo que você pensa, envolvendo até mesmo sua filha.",
+    "name": "Hermia",
+    "options": [
+      "Tudo bem irei te ajudar",
+      "Como sabe sobre a minha filha?",
+      "O acidente de minha filha foi de minha responsabilidade."
+    ],
+    "path": [
+      "12",
+      "10",
+      "11"
+    ],
+    "event": 1
+  },
+  "8": {
+    "previous": "5",
+    "message": "Apesar de saber muita coisa, não consigo agir sozinha, preciso de alguém ao meu lado. E tenho certeza de que você irá me ajudar, afinal o assunto em questão vai muito mais fundo do que você pensa, envolvendo até mesmo sua filha .",
+    "name": "Hermia",
+    "options": [
+      "Tudo bem irei te ajudar",
+      "Como sabe sobre a minha filha?",
+      "O acidente de minha filha foi de minha responsabilidade"
+    ],
+    "path": [
+      "12",
+      "10",
+      "11"
+    ],
+    "event": 1
+  },
+  "9": {
+    "previous": "5",
+    "message": "Sim, entrei e tenho muitos contatos proximos, assim como estou falando com você agora, cada um com suas habilidades que necessito, e você tem uma habilidade que preciso e muito agora. Bom tenho certeza que você irá me ajudar, afinal o assunto em questão vai muito mais fundo que você pensar. envolvendo até mesmo sua filha.",
+    "name": "Hermia",
+    "options": [
+      "Tudo irei te ajudar",
+      "como sabe sobre a minha filha?",
+      "O acidente de minha filha foi de minha responsabilidade"
+    ],
+    "path": [
+      "12",
+      "10",
+      "11"
+    ],
+    "event": 1
+  },
+  "10": {
+    "previous": "6",
+    "message": "Eu sei que você esteve errado todos esses anos. E agora estou aqui, como uma luz em sua própria escuridão, para te mostrar o que realmente aconteceu. Para isso preciso de sua ajudar, é agora ou nunca. Essa é a sua chance de fazer a diferença e descobrir afinal o que houve naquela noite .",
+    "name": "Hermia",
+    "options": [
+      "Tudo bem, eu irei te ajudar",
+      "Não, chega de tudo isso, ponto final",
+      "Certo, por onde começamos?"
+    ],
+    "path": [
+      "12",
+      "13",
+      "12"
+    ],
+    "event": 1
+  },
+  "11": {
+    "previous": "6",
+    "message": "Esse é meu dom saber sobre as pessoas, mas preciso delas para agirem por mim. Igual estou aqui diante a você pedindo sua ajuda para investigar por mim e achar as devidas respostas . Tenho certas limitações, e é onde você entrará para me ajudar. E te prometo trazer respostas sobre o responsável pelo que houve com a sua filha.",
+    "name": "Hermia",
+    "options": [
+      "Não quero tocar nesse assunto, e não irei ter ajudar nessa sua missão sem fim.",
+      "Não tem culpado, apenas a mim, eu me descuidei",
+      "Certo, por onde começamos?"
+    ],
+    "path": [
+      "13",
+      "10",
+      "12"
+    ],
+    "event": 1
+  },
+  "12": {
+    "previous": "",
+    "message": "Beleza, vamos começar já com isso. Estou enviando o arquivo.",
+    "name": "Hermia",
+    "options": [
+      "Descriptografar arquivo"
+    ],
+    "path": [
+      "14"
+    ],
+    "event": 3
+  },
+  "13": {
+    "previous": "",
+    "message": "Irei procurar outra pessoa para me ajudar, e você ficará nessa escuridão para sempre, enquanto logo debaixo de seus pés a verdade sempre esteve ali. Adeus .",
+    "name": "Hermia",
+    "options": [],
+    "path": [],
+    "event": 0
+  },
+  "14": {
+    "previous": "12",
+    "message": "Parabéns por ter conseguido descriptografar o primeiro arquivo. Eu dei uma olhada nas informações e estamos caminhando na direção certa.",
+    "name": "Hermia",
+    "options": [
+      "O que mais tinha no arquivo?",
+      "Tinha algo sobre minha filha?",
+      "Me dê mais detalhes!"
+    ],
+    "path": [
+      "15",
+      "16",
+      "15"
+    ],
+    "event": 1
+  },
+  "15": {
+    "previous": "14",
+    "messagem": "Eles invadiram áreas de preservação, desmataram, mataram milhares de animais, construíram em cima de aterros desativados e criaram seus próprios prédios pensando apenas com seu egocentrísmo não respeitando o solo onde estávam. O resultado foi um desabamento que matou centenas de pessoas, que tiveram a causa de sua morte como um 'pequeno acidente'.",
+    "name": "Hermia",
+    "options": [
+      "E ninguém descobriu nada sobre o que estávam escondendo?",
+      "Mas agora essas pessoas poderam ter suas mortes vingadas, correto?",
+      "E a minha filha está envolvida nesta história?"
+    ],
+    "path": [
+      "17",
+      "18",
+      "16"
+    ],
+    "event": 1
+  },
+  "16": {
+    "previous": "14",
+    "message": "Vasculhei tudo o que me entregou, mas não encontrei algo que possuísse relação com este fato. A mesma fonte com quem peguei o arquivo anterior está agora atrás de mais provas para dar certeza de que eles têm algo a ver com a morte de sua filha. E eu acredito sim que eles têm algo a ver.",
+    "name": "Hermia",
+    "options": [
+      "E como essas informações estavam escondidas até agora, sem que soubessem de nada?",
+      "Enquanto isso continuemos então com o plano, vingaremos as mortes, correto?",
+      "As coisas me parecem incertas demais, mas como conseguiram escapar de tantas coisas?"
+    ],
+    "path": [
+      "17",
+      "18",
+      "17"
+    ],
+    "event": 1
+  },
+  "17": {
+    "previous": "15",
+    "message": "Provalvelmente eles forjaram as provas, para evitar perder dinheiro com isto.",
+    "name": "Hermia",
+    "options": [
+      "Mas com estas provas podemos mudar este cenário, né?",
+      "O que sugere fazermos agora?",
+      "E o que eu preciso fazer agora?"
+    ],
+    "path": [
+      "18",
+      "19",
+      "19"
+    ],
+    "event": 1
+  },
+  "18": {
+    "previous": "15",
+    "message": "Correto! Podemos vingar as vidas inocentes que se perderam pelas atrocidades dessas pessoas. E eu sei como faremos isso. Você entregará essas provas para alguém que com certeza nos ajudará, mas isso será no anonimato. Se souberem que foi você, sua vida estará comprometida.",
+    "name": "Hermia",
+    "options": [
+      "E por onde eu começo?",
+      "Eu continuo a te ajudar quando tiver notícias sobre minha filha!",
+      "Isso é arriscado, mas vamos lá."
+    ],
+    "path": [
+      "20",
+      "18",
+      "20"
+    ],
+    "event": 1
+  },
+  "19": {
+    "previous": "17",
+    "message": "Você entregará essas provas para alguém que com certeza nos ajudará, mas isso será no anonimato. Se souberem que foi você, sua vida estará comprometida.",
+    "name": "Hermia",
+    "options": [
+      "E por onde eu começo?",
+      "Eu continuo a te ajudar quando tiver notícias sobre minha filha!",
+      "Isso é arriscado, mas vamos lá."
+    ],
+    "path": [
+      "20",
+      "18",
+      "20"
+    ],
+    "event": 1
+  },
+  "20": {
+    "previous": "",
+    "message": "Certo, tenho um contato confiável para o qual você enviará as provas que conseguimos. Envie-as para o seguinte email: vladmir@redacaouol.com.br",
+    "name": "Hermia",
+    "options": [
+      "Você quer publicá-las?",
+      "Porque você mesmo não as envia?",
+      "Tem certeza que isto dará certo?"
+    ],
+    "path": [
+      "23",
+      "24",
+      "23"
+    ],
+    "event": 1
+  },
+  "21": {
+    "previous": "18",
+    "message": "Não posso te dar informações sem as devidas confirmações. Confie em mim, eu acredito que foram eles os culpados.",
+    "name": "Hermia",
+    "options": [
+      "Tudo bem, vamos começar...",
+      "Eu não acho que posso confiar 100% em você, mas ok...",
+      "Cansei disso tudo, você está apenas se aproveitando de mim. Adeus!"
+    ],
+    "path": [
+      "20",
+      "20",
+      "22"
+    ],
+    "event": 1
+  },
+  "22": {
+    "previous": "",
+    "message": "Se prefere assim, não lhe forçarei a nada!",
+    "name": "Hermia",
+    "options": [],
+    "path": [],
+    "event": 0
+  },
+  "23": {
+    "previous": "20",
+    "message": "Este meu contato é influente entre outros jornalistas, ele conseguirá que a matéria seja publicada, não demorará muito até a polícia abrir um inquérito sobre isso.",
+    "name": "Hermia",
+    "options": [
+      "E se não abrirem, e se o caso for abafado? O que faremos?",
+      "'Enviar e-mail agora mesmo'",
+      "Tem certeza que isto dará certo?"
+    ],
+    "path": [
+      "25",
+      "26",
+      "25"
+    ],
+    "event": 1
+  },
+  "24":{
+    "previous":"20",
+    "message":"Preciso que você apenas confie em mim.",
+    "name":"Hermia",
+    "options":[
+      "'Enviar e-mail agora mesmo'",
+      "Já chega de mistério! Você não acha injusto que você saiba tanto de mim e eu não possa saber nada sobre você?",
+      "E se não abrirem, e se o caso for abafado? O que faremos?"
+    ],
+    "path":[
+      "26",
+      "27",
+      "25"
+    ],
+    "event":1
+  },
+  "25":{
+    "previous":"24",
+    "message":"Se nada der certo precisarei intervir, já aconteceu antes, mas dessa vez talvez tenha que ser mais dura.",
+    "name":"Hermia",
+    "options":[
+      "Não entendo o que você está falando, até agora sei muito pouco sobre você e você parece saber muito sobre mim, isto não é injusto?",
+      "Como assim 'já aconteceu antes?'. Quem é você?",
+      "Afinal qual é seu objetivo com isso tudo?"
+    ],
+    "path":[
+      "27",
+      "27",
+      "28"
+    ],
+    "event":1
+  },
+  "26":{
+    "previous":"",
+    "message":"Te contarei quem sou, mas precisarei que você acredite em minhas palavras.",
+    "name":"Hermia",
+    "options":[
+      "Quem é você?",
+      "Ok. Chega de mistério",
+      "Cansei desse joguinho"
+    ],
+    "path":[
+      "30",
+      "30",
+      "30"
+    ],
+    "event":4
+  },
+  "27":{
+    "previous":"",
+    "message":"Envie o email e então revelarei quem sou.",
+    "name":"Hermia",
+    "options":[
+      "Ok.",
+      "Aceito apenas nesta condição, de saber quem você é.",
+      "Desculpe, não posso seguir com isso."
+    ],
+    "path":[
+      "26",
+      "26",
+      "29"
+    ],
+    "event":1
+  },
+  "28":{
+    "previous":"",
+    "message":"Quero mostrar ninguém tem direito de tirar tudo da natureza, nada dura para sempre, além disso todas as coisa que passam pelo caminho deles, animais, floresta, todos tem direito a vida.",
+    "name":"Hermia",
+    "options":[
+      "Ok, você é uma ativista. Irei enviar o email.",
+      "Você é uma espécie de ativista?",
+      "Quem é você?"
+    ],
+    "path":[
+      "26",
+      "27",
+      "27"
+    ],
+    "event":1
+  },
+  "29":{
+    "previous":"",
+    "message":"Então terminamos por aqui. Irei procurar outra pessoa para me ajudar e caso nada der certo terei de agir, o mundo não pode ficar sofrendo pela ganância do homem.",
+    "name":"Hermia",
+    "options":[],
+    "path":[],
+    "event":0
+  },
+  "30":{
+    "previous":"",
+    "message":"Ouça as minhas palavras e tenha fé. Eu sou o ar, a terra, a água, eu sou a formiga, a onça, eu sou as árvores e tudo que se move. Gerei vocês e os dotei de inteligência para compreender o fino equilíbrio entre tudo o que vive, mas vocês deturparam este dom, escravizaram, saquearam e destruíram seus irmãos, por isso estou dando mais uma chance a humanidade, a última. Se não mudarem sua conduta terei que eliminá-los como a doença que se tornaram.",
+    "name":"Hermia",
+    "options":[
+      "Você está dizendo que é a natureza??",
+      "Eu acredito.",
+      "Cansei dessa brincadeira."
+    ],
+    "path":[
+      "30",
+      "30",
+      "29"
+    ],
+    "event":1
+  },
+  "31":{
+    "previous":"30",
+    "message":"Sou Hérmia, Pachamama, Gaia, Ísis, a mãe natureza, eu estava a ponto de destruir a terra, mas resolvi escutar o pedido de uma de minhas filhas, que te indicou para que pudesse me ajudar.",
+    "options":[
+      "Por que eu?",
+      "Quem?",
+      "Uma de suas filhas?"
+    ],
+    "path":[
+      "32",
+      "32",
+      "32"
+    ],
+    "event":1
+  },
+  "32":{
+    "previous":"31",
+    "message":"Sim, sua filha, ela está junto de mim. Ela respeitou e cuidou de minha criação durante a vida. A pedido dela te escolhi para espalhar a justiça pelo mundo e salvar a humanidade.  O mundo vive um sistema parasita, onde ricos vivem as custas da destruição de todo tipo de vida na Terra.",
+    "options":[
+      "Estou com você.",
+      "Muito obrigado por confiar em mim.",
+      "Farei tudo para continuar o sonho de minha filha."
+    ],
+    "path":[
+      "33",
+      "33",
+      "33"
+    ],
+    "event":1
+  },
+  "33":{
+    "previous":"31",
+    "message":"Muito obrigado por jogar.",
+    "options":[],
+    "path":[],
+    "event":5
+  }
+}
