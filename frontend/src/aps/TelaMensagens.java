@@ -1,8 +1,12 @@
 package aps;
 
 import static aps.TelaInicial.profileURL;
-import java.awt.Frame;
+import static aps.TelaInicial.nameUser;
+import aps.backend.JsonHandler;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  *
@@ -10,6 +14,10 @@ import javax.swing.ImageIcon;
  */
 public class TelaMensagens extends javax.swing.JFrame {
 
+    JsonHandler jsonHandler = new JsonHandler();
+    JSONObject objJSON = jsonHandler.initialize();
+    JSONObject newObjJSON = objJSON;
+    
     /**
      * Creates new form Desktop
      */
@@ -22,8 +30,20 @@ public class TelaMensagens extends javax.swing.JFrame {
         //Modificando o Icon
         url__profile.setIcon(newProfile);
         //FIM Modificando URL__PROFILE
+        
+        txt__mensagger.setText(objJSON.getString("name") + "\n" + objJSON.getString("message") + ", " + nameUser + "\n\n");
+        Alternativa01.setText(objJSON.getJSONArray("options").getString(0));
+        Alternativa02.setText(objJSON.getJSONArray("options").getString(1));
+        Alternativa03.setText(objJSON.getJSONArray("options").getString(2));
     }
 
+    public void alterOptions() {
+        Alternativa01.setText(newObjJSON.getJSONArray("options").getString(0));
+        Alternativa02.setText(newObjJSON.getJSONArray("options").getString(1));
+        Alternativa03.setText(newObjJSON.getJSONArray("options").getString(2));
+        AnswerGroup.clearSelection();
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -112,21 +132,63 @@ public class TelaMensagens extends javax.swing.JFrame {
 
     //Evento Clicked Button Enviar
     private void btn__EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn__EnviarActionPerformed
+        
         if (Alternativa01.isSelected()){
-            txt__mensagger.setText(txt__mensagger.getText() + "Alternativa 1\n" +
-            "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica mplesmente uma simulação de texto da indústria tipográfica áfica mplesmente uma simulação de texto da indústria tipográfic áfica mplesmente uma simulação de texto da indústria tipográfic áfica mplesmente uma simulação de texto da indústria tipográfic.\n\n");  
+            txt__mensagger.setText(txt__mensagger.getText() + nameUser + "\n" +
+            newObjJSON.getJSONArray("options").getString(0) + "\n\n");
+            
+            try {
+                Thread.sleep(2000);
+                newObjJSON = jsonHandler.nextScene(newObjJSON.getJSONArray("path").getString(0));
+                txt__mensagger.setText(txt__mensagger.getText() + newObjJSON.getString("name") + "\n" + newObjJSON.getString("message") + "\n\n");             
+                alterOptions();
+                
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(this,"GAME OVER");
+                System.out.println(e);
+                System.exit(0);
+            }
+            
         }else if(Alternativa02.isSelected()){
-            txt__mensagger.setText(txt__mensagger.getText() + "Alternativa 2\n" +
-            "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica mplesmente uma simulação de texto da indústria tipográfica.\n\n");            
+            txt__mensagger.setText(txt__mensagger.getText() + nameUser + "\n" +
+            newObjJSON.getJSONArray("options").getString(1) + "\n\n");
+            
+            try {
+                newObjJSON = jsonHandler.nextScene(newObjJSON.getJSONArray("path").getString(1));
+                txt__mensagger.setText(txt__mensagger.getText() + newObjJSON.getString("name") + "\n" + newObjJSON.getString("message") + "\n\n");
+                alterOptions();
+                
+            } catch (JSONException e) {
+                
+                
+                JOptionPane.showMessageDialog(this,"GAME OVER");
+                System.out.println(e);
+                System.exit(0);
+            }
+            
         }else if(Alternativa03.isSelected()){
-            txt__mensagger.setText(txt__mensagger.getText() + "Jonathan\n" +
-            "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica mplesmente uma simulação de texto da indústria tipográfica.\n\n");            
+            txt__mensagger.setText(txt__mensagger.getText() + nameUser + "\n" +
+            newObjJSON.getJSONArray("options").getString(2) + "\n\n");
+            
+            try {
+                newObjJSON = jsonHandler.nextScene(newObjJSON.getJSONArray("path").getString(2));
+                txt__mensagger.setText(txt__mensagger.getText() + newObjJSON.getString("name") + "\n" + newObjJSON.getString("message") + "\n\n");
+                alterOptions();
+                
+            } catch (JSONException e) {
+                JOptionPane.showMessageDialog(this,"GAME OVER");
+                System.out.println(e);
+                System.exit(0);
+            }
         }
+        
     }//GEN-LAST:event_btn__EnviarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        this.setState(Frame.ICONIFIED);
+                NewClass MainPrincipal = new NewClass();
+        //Chamando método que está localizado no nosso MainPrincipal
+        MainPrincipal.instacimanetoPuzzle();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

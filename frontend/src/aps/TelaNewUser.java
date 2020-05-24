@@ -1,6 +1,7 @@
 package aps;
 
 import static aps.TelaInicial.profileURL;
+import static aps.TelaInicial.nameUser;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -247,6 +248,7 @@ public class TelaNewUser extends javax.swing.JFrame {
 
     private void btn__salvarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn__salvarMouseClicked
         // TODO add your handling code here:
+        nameUser = input__nome.getText();
         this.setVisible(false);
         new TelaCapitulos().setVisible(true);       
     }//GEN-LAST:event_btn__salvarMouseClicked
