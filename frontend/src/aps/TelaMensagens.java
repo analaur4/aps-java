@@ -41,7 +41,35 @@ public class TelaMensagens extends javax.swing.JFrame {
         Alternativa01.setText(newObjJSON.getJSONArray("options").getString(0));
         Alternativa02.setText(newObjJSON.getJSONArray("options").getString(1));
         Alternativa03.setText(newObjJSON.getJSONArray("options").getString(2));
+        txt__mensagger.setText(txt__mensagger.getText() + newObjJSON.getString("name") + "\n" + newObjJSON.getString("message") + "\n\n");
         AnswerGroup.clearSelection();
+    }
+    
+    public void alterEvent() {
+        if (null != newObjJSON.get("event")) switch (newObjJSON.getInt("event")) {
+            case 0:
+                JOptionPane.showMessageDialog(this,"GAME OVER");
+                System.exit(0);
+                break;
+            case 3:
+                JOptionPane.showMessageDialog(this,"Descriptografar");
+                Alternativa01.doClick();
+                btn__Enviar.doClick();
+                txt__mensagger.setText(txt__mensagger.getText() + nameUser + "\n" +
+                    newObjJSON.getJSONArray("options").getString(0) + "\n\n");
+                newObjJSON = jsonHandler.nextScene(newObjJSON.getJSONArray("path").getString(0));
+                alterOptions();
+                break;
+            case 4:
+                JOptionPane.showMessageDialog(this,"Enviar e-mails");
+                newObjJSON = jsonHandler.nextScene(newObjJSON.getJSONArray("path").getString(0));
+                break;
+            case 5:
+                JOptionPane.showMessageDialog(this,"Créditos");
+                break;
+            default:
+                break;
+        }
     }
     
     /**
@@ -137,47 +165,26 @@ public class TelaMensagens extends javax.swing.JFrame {
             txt__mensagger.setText(txt__mensagger.getText() + nameUser + "\n" +
             newObjJSON.getJSONArray("options").getString(0) + "\n\n");
             
-            try {
-                Thread.sleep(2000);
-                newObjJSON = jsonHandler.nextScene(newObjJSON.getJSONArray("path").getString(0));
-                txt__mensagger.setText(txt__mensagger.getText() + newObjJSON.getString("name") + "\n" + newObjJSON.getString("message") + "\n\n");             
-                alterOptions();
-                
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(this,"GAME OVER");
-                System.out.println(e);
-                System.exit(0);
-            }
+            newObjJSON = jsonHandler.nextScene(newObjJSON.getJSONArray("path").getString(0));
+            alterOptions();
+            alterEvent();
             
         }else if(Alternativa02.isSelected()){
             txt__mensagger.setText(txt__mensagger.getText() + nameUser + "\n" +
             newObjJSON.getJSONArray("options").getString(1) + "\n\n");
             
-            try {
-                newObjJSON = jsonHandler.nextScene(newObjJSON.getJSONArray("path").getString(1));
-                txt__mensagger.setText(txt__mensagger.getText() + newObjJSON.getString("name") + "\n" + newObjJSON.getString("message") + "\n\n");
-                alterOptions();
-                
-            } catch (JSONException e) {
-                JOptionPane.showMessageDialog(this,"GAME OVER");
-                System.out.println(e);
-                System.exit(0);
-            }
-            
+            newObjJSON = jsonHandler.nextScene(newObjJSON.getJSONArray("path").getString(1));
+            alterOptions();
+            alterEvent();
+                        
         }else if(Alternativa03.isSelected()){
             txt__mensagger.setText(txt__mensagger.getText() + nameUser + "\n" +
             newObjJSON.getJSONArray("options").getString(2) + "\n\n");
             
-            try {
-                newObjJSON = jsonHandler.nextScene(newObjJSON.getJSONArray("path").getString(2));
-                txt__mensagger.setText(txt__mensagger.getText() + newObjJSON.getString("name") + "\n" + newObjJSON.getString("message") + "\n\n");
-                alterOptions();
-                
-            } catch (JSONException e) {
-                JOptionPane.showMessageDialog(this,"GAME OVER");
-                System.out.println(e);
-                System.exit(0);
-            }
+            newObjJSON = jsonHandler.nextScene(newObjJSON.getJSONArray("path").getString(2));
+            alterOptions();
+            alterEvent();
+
         }
         
     }//GEN-LAST:event_btn__EnviarActionPerformed

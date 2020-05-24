@@ -180,10 +180,14 @@
     "message": "Beleza, vamos começar já com isso. Estou enviando o arquivo.",
     "name": "Hermia",
     "options": [
-      "Descriptografar arquivo"
+      "Arquivo Descriptografado!",
+      "",
+      ""
     ],
     "path": [
-      "14"
+      "14",
+      "",
+      ""
     ],
     "event": 3
   },
@@ -191,7 +195,11 @@
     "previous": "",
     "message": "Irei procurar outra pessoa para me ajudar, e você ficará nessa escuridão para sempre, enquanto logo debaixo de seus pés a verdade sempre esteve ali. Adeus .",
     "name": "Hermia",
-    "options": [],
+    "options": [
+        "",
+        "",
+        ""
+    ],
     "path": [],
     "event": 0
   },
@@ -213,7 +221,7 @@
   },
   "15": {
     "previous": "14",
-    "messagem": "Eles invadiram áreas de preservação, desmataram, mataram milhares de animais, construíram em cima de aterros desativados e criaram seus próprios prédios pensando apenas com seu egocentrísmo não respeitando o solo onde estávam. O resultado foi um desabamento que matou centenas de pessoas, que tiveram a causa de sua morte como um 'pequeno acidente'.",
+    "message": "Eles invadiram áreas de preservação, desmataram, mataram milhares de animais, construíram em cima de aterros desativados e criaram seus próprios prédios pensando apenas com seu egocentrísmo não respeitando o solo onde estávam. O resultado foi um desabamento que matou centenas de pessoas, que tiveram a causa de sua morte como um 'pequeno acidente'.",
     "name": "Hermia",
     "options": [
       "E ninguém descobriu nada sobre o que estávam escondendo?",
@@ -327,7 +335,11 @@
     "previous": "",
     "message": "Se prefere assim, não lhe forçarei a nada!",
     "name": "Hermia",
-    "options": [],
+    "options": [
+        "",
+        "",
+        ""
+    ],
     "path": [],
     "event": 0
   },
@@ -431,7 +443,11 @@
     "previous":"",
     "message":"Então terminamos por aqui. Irei procurar outra pessoa para me ajudar e caso nada der certo terei de agir, o mundo não pode ficar sofrendo pela ganância do homem.",
     "name":"Hermia",
-    "options":[],
+    "options":[
+        "",
+        "",
+        ""
+    ],
     "path":[],
     "event":0
   },
