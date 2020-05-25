@@ -5,6 +5,7 @@
  */
 package aps;
 import static aps.DescriptografandoAndEnviando.acerto;
+import static aps.DescriptografandoAndEnviando.ordemPuzzle;
 /**
  *
  * @author UnGui
@@ -31,72 +32,87 @@ public class TelaPuzzle extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         jButton1 = new javax.swing.JButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        Alternativa01 = new javax.swing.JRadioButton();
+        Alternativa02 = new javax.swing.JRadioButton();
+        Alternativa03 = new javax.swing.JRadioButton();
+        Alternativa04 = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
+        lbl_tituloQuest = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
-        jButton1.setText("jButton1");
+        jButton1.setText("RESPONDE");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("true");
+        buttonGroup1.add(Alternativa01);
+        Alternativa01.setText("true");
 
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("true");
+        buttonGroup1.add(Alternativa02);
+        Alternativa02.setText("true");
 
-        buttonGroup1.add(jRadioButton3);
-        jRadioButton3.setText("false");
+        buttonGroup1.add(Alternativa03);
+        Alternativa03.setText("false");
 
-        buttonGroup1.add(jRadioButton4);
-        jRadioButton4.setText("false");
+        buttonGroup1.add(Alternativa04);
+        Alternativa04.setText("false");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("0 %");
+
+        lbl_tituloQuest.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton4))
-                .addGap(64, 64, 64))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(87, 87, 87)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(97, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(157, 157, 157))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Alternativa02)
+                    .addComponent(Alternativa01))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Alternativa03)
+                    .addComponent(Alternativa04))
+                .addGap(64, 64, 64))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(87, 87, 87)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addComponent(lbl_tituloQuest, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(lbl_tituloQuest, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton3))
+                    .addComponent(Alternativa01)
+                    .addComponent(Alternativa03))
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton4))
+                    .addComponent(Alternativa02)
+                    .addComponent(Alternativa04))
                 .addGap(18, 18, 18)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
@@ -107,18 +123,60 @@ public class TelaPuzzle extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-                 if (jRadioButton1.isSelected()){            
+                 if (Alternativa01.isSelected()){            
             acerto = true;
-        }else if (jRadioButton2.isSelected()){
+        }else if (Alternativa02.isSelected()){
             acerto = true;    
-        }else if (jRadioButton3.isSelected()){
+        }else if (Alternativa03.isSelected()){
             acerto = false;   
-        }else if (jRadioButton4.isSelected()){
+        }else if (Alternativa04.isSelected()){
             acerto = false;    
         }
         System.out.println(acerto);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+        switch (ordemPuzzle) {
+            case 0:
+                Alternativa01.setText("0");
+                Alternativa02.setText("0");
+                Alternativa03.setText("0");
+                Alternativa04.setText("0");
+                break;
+            case 1:
+                Alternativa01.setText("1");
+                Alternativa02.setText("1");
+                Alternativa03.setText("1");
+                Alternativa04.setText("1");
+                break;
+            case 2:
+                Alternativa01.setText("2");
+                Alternativa02.setText("2");
+                Alternativa03.setText("2");
+                Alternativa04.setText("2");
+                break;
+            case 3:
+                Alternativa01.setText("3");
+                Alternativa02.setText("3");
+                Alternativa03.setText("3");
+                Alternativa04.setText("3");
+                break;
+            case 4:
+                Alternativa01.setText("4");
+                Alternativa01.setText("4");
+                Alternativa01.setText("4");
+                Alternativa01.setText("4");
+                break;
+            case 5:
+                Alternativa01.setText("5");
+                Alternativa01.setText("5");
+                Alternativa01.setText("5");
+                Alternativa01.setText("5");
+                break;    
+        }
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments
@@ -156,12 +214,13 @@ public class TelaPuzzle extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton Alternativa01;
+    private javax.swing.JRadioButton Alternativa02;
+    private javax.swing.JRadioButton Alternativa03;
+    private javax.swing.JRadioButton Alternativa04;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     public javax.swing.JLabel jLabel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JLabel lbl_tituloQuest;
     // End of variables declaration//GEN-END:variables
 }

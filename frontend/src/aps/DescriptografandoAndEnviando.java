@@ -16,6 +16,7 @@ public class DescriptografandoAndEnviando extends javax.swing.JFrame {
      * Creates new form DescriptografandoAndEnviando
      */
     public static boolean acerto = false;
+    public static int ordemPuzzle = 0; //0 = false
     int fracassou = 0; //Variavel criada para caso o usuário errer 3 vezes .
     TelaPuzzle janelinhaTeste = new TelaPuzzle();
     
@@ -52,10 +53,16 @@ public class DescriptografandoAndEnviando extends javax.swing.JFrame {
                             }
                         }
 //                        JOptionPane.showMessageDialog(null,"Tempo esgotado");
-                        janelinhaTeste.setVisible(false);
-                        fracassou += 1;
-                        break;                        
+                        if (janelinhaTeste.isVisible() == false){
+                            System.out.println("cai aqui merda");
+                            fracassou += 1;
+                            break;
+                        }
+//                        janelinhaTeste.setVisible(false);
+//                        fracassou += 1;
+//                        break;                        
                     }while(janelinhaTeste.isVisible());
+                    ordemPuzzle += 1;
                     int cont = seconds - 22;
                     seconds -= cont;
                         jProgressBar1.setValue(seconds);    
@@ -86,10 +93,12 @@ public class DescriptografandoAndEnviando extends javax.swing.JFrame {
                             }
                         }
 //                        JOptionPane.showMessageDialog(null,"Tempo esgotado");
-                        janelinhaTeste.setVisible(false);
-                        fracassou += 1;
-                        break;                        
+                        if (janelinhaTeste.isVisible() == false){
+                            fracassou += 1;
+                            break;
+                        }                       
                     }while(janelinhaTeste.isVisible());
+                    ordemPuzzle += 1;
                     int cont = seconds - 62;
                     seconds -= cont;
                         jProgressBar1.setValue(seconds);    
@@ -120,10 +129,12 @@ public class DescriptografandoAndEnviando extends javax.swing.JFrame {
                             }
                         }
 //                        JOptionPane.showMessageDialog(null,"Tempo esgotado");
-                        janelinhaTeste.setVisible(false);
-                        fracassou += 1;
-                        break;                        
+                        if (janelinhaTeste.isVisible() == false){
+                            fracassou += 1;
+                            break;
+                        }                        
                     }while(janelinhaTeste.isVisible());
+                    ordemPuzzle += 1;
                     int cont = seconds - 92;
                     seconds -= cont;
                         jProgressBar1.setValue(seconds);    
