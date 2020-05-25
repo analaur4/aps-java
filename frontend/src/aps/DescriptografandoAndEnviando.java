@@ -16,7 +16,7 @@ public class DescriptografandoAndEnviando extends javax.swing.JFrame {
      * Creates new form DescriptografandoAndEnviando
      */
     public static boolean acerto = false;
-    public static int ordemPuzzle = 0; //0 = false
+    public static int ordemPuzzle = 0; //0 = primeira ordem de questões
     int fracassou = 0; //Variavel criada para caso o usuário errer 3 vezes .
     TelaPuzzle janelinhaTeste = new TelaPuzzle();
     
@@ -29,7 +29,6 @@ public class DescriptografandoAndEnviando extends javax.swing.JFrame {
                 seconds = 100;
             }
             jProgressBar1.setValue(seconds);
-            System.out.println(jProgressBar1.getValue());
             if(seconds == 22){
                 int testeFracasso = 0; //0 = false
                     janelinhaTeste.setVisible(true);
@@ -65,9 +64,9 @@ public class DescriptografandoAndEnviando extends javax.swing.JFrame {
                         jProgressBar1.setValue(-24);
                         jProgressBar1.setValue(seconds);
                         jProgressBar1.setValue(-14);
-                        System.out.println("cai aqui no acerto false");
                         fracassou += 1;
                     }
+                    System.out.println(ordemPuzzle);
              }else if(seconds == 62){
                  int testeFracasso = 0; //0 = false
                     janelinhaTeste.setVisible(true);
@@ -102,7 +101,6 @@ public class DescriptografandoAndEnviando extends javax.swing.JFrame {
                         jProgressBar1.setValue(-27);
                         jProgressBar1.setValue(seconds);
                         jProgressBar1.setValue(-14);
-                        System.out.println("cai aqui no acerto false");
                         fracassou += 1;
                     }             
             }else if (seconds == 92){

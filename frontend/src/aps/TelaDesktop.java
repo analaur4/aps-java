@@ -6,6 +6,9 @@
 package aps;
 
 import java.awt.Frame;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
@@ -37,7 +40,6 @@ public class TelaDesktop extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         barraFerramenta__UserConfig = new javax.swing.JPanel();
         user__config = new javax.swing.JLabel();
-        barraFerramenta__nomeMensagger = new javax.swing.JPanel();
         barraFerramenta__Hour = new javax.swing.JPanel();
         hour = new javax.swing.JLabel();
         icon__Mensegger = new javax.swing.JLabel();
@@ -48,6 +50,9 @@ public class TelaDesktop extends javax.swing.JFrame {
         setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(1365, 785));
         addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
             }
@@ -84,27 +89,6 @@ public class TelaDesktop extends javax.swing.JFrame {
 
         barraFerramenta.add(barraFerramenta__UserConfig);
         barraFerramenta__UserConfig.setBounds(0, 0, 80, 60);
-
-        barraFerramenta__nomeMensagger.setBackground(new java.awt.Color(168, 183, 95));
-        barraFerramenta__nomeMensagger.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                barraFerramenta__nomeMensaggerMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout barraFerramenta__nomeMensaggerLayout = new javax.swing.GroupLayout(barraFerramenta__nomeMensagger);
-        barraFerramenta__nomeMensagger.setLayout(barraFerramenta__nomeMensaggerLayout);
-        barraFerramenta__nomeMensaggerLayout.setHorizontalGroup(
-            barraFerramenta__nomeMensaggerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
-        );
-        barraFerramenta__nomeMensaggerLayout.setVerticalGroup(
-            barraFerramenta__nomeMensaggerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-
-        barraFerramenta.add(barraFerramenta__nomeMensagger);
-        barraFerramenta__nomeMensagger.setBounds(120, 0, 200, 50);
 
         barraFerramenta__Hour.setBackground(new java.awt.Color(168, 183, 95));
         barraFerramenta__Hour.setLayout(null);
@@ -155,11 +139,14 @@ public class TelaDesktop extends javax.swing.JFrame {
         new TelaMensagens().setVisible(true);
     }//GEN-LAST:event_icon__MenseggerMouseClicked
 
-    private void barraFerramenta__nomeMensaggerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barraFerramenta__nomeMensaggerMouseClicked
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
         // TODO add your handling code here:
-        new TelaMensagens().setVisible(true);
-//        new TelaMensagens().setExtendedState(TelaMensagens.MAXIMIZED_BOTH);
-    }//GEN-LAST:event_barraFerramenta__nomeMensaggerMouseClicked
+                SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+                Date hora = Calendar.getInstance().getTime(); // Ou qualquer outra forma que tem
+                String dataFormatada = sdf.format(hora);
+                System.out.println(dataFormatada);
+                hour.setText(dataFormatada);
+    }//GEN-LAST:event_formWindowActivated
 
     /**
      * @param args the command line arguments
@@ -201,7 +188,6 @@ public class TelaDesktop extends javax.swing.JFrame {
     private javax.swing.JPanel barraFerramenta;
     private javax.swing.JPanel barraFerramenta__Hour;
     private javax.swing.JPanel barraFerramenta__UserConfig;
-    private javax.swing.JPanel barraFerramenta__nomeMensagger;
     private javax.swing.JLabel hour;
     private javax.swing.JLabel icon__Mensegger;
     private javax.swing.JLabel icon__puzzle;

@@ -22,6 +22,55 @@ public class TelaPuzzle extends javax.swing.JFrame {
      */
     public TelaPuzzle() {
         initComponents();
+        
+        System.out.println("abrir a tela hello");
+//            if (this.isVisible() == true){
+                switch (ordemPuzzle) {
+            case 0:
+                Alternativa01.setText("0");
+                Alternativa02.setText("0");
+                Alternativa03.setText("0");
+                Alternativa04.setText("0");
+                ordemPuzzle += 1;
+                break;
+            case 1:
+                Alternativa01.setText("1");
+                Alternativa02.setText("1");
+                Alternativa03.setText("1");
+                Alternativa04.setText("1");
+                ordemPuzzle += 1;
+                break;
+            case 2:
+                Alternativa01.setText("2");
+                Alternativa02.setText("2");
+                Alternativa03.setText("2");
+                Alternativa04.setText("2");
+                ordemPuzzle += 1;
+                break;
+            case 3:
+                Alternativa01.setText("3");
+                Alternativa02.setText("3");
+                Alternativa03.setText("3");
+                Alternativa04.setText("3");
+                ordemPuzzle += 1;
+                break;
+            case 4:
+                Alternativa01.setText("4");
+                Alternativa01.setText("4");
+                Alternativa01.setText("4");
+                Alternativa01.setText("4");
+                break;
+            case 5:
+                Alternativa01.setText("5");
+                Alternativa01.setText("5");
+                Alternativa01.setText("5");
+                Alternativa01.setText("5");
+                ordemPuzzle += 1;
+                break;    
+//        }
+        
+    }
+                
     }
 
     /**
@@ -150,44 +199,45 @@ public class TelaPuzzle extends javax.swing.JFrame {
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
-        switch (ordemPuzzle) {
-            case 0:
-                Alternativa01.setText("0");
-                Alternativa02.setText("0");
-                Alternativa03.setText("0");
-                Alternativa04.setText("0");
-                break;
-            case 1:
-                Alternativa01.setText("1");
-                Alternativa02.setText("1");
-                Alternativa03.setText("1");
-                Alternativa04.setText("1");
-                break;
-            case 2:
-                Alternativa01.setText("2");
-                Alternativa02.setText("2");
-                Alternativa03.setText("2");
-                Alternativa04.setText("2");
-                break;
-            case 3:
-                Alternativa01.setText("3");
-                Alternativa02.setText("3");
-                Alternativa03.setText("3");
-                Alternativa04.setText("3");
-                break;
-            case 4:
-                Alternativa01.setText("4");
-                Alternativa01.setText("4");
-                Alternativa01.setText("4");
-                Alternativa01.setText("4");
-                break;
-            case 5:
-                Alternativa01.setText("5");
-                Alternativa01.setText("5");
-                Alternativa01.setText("5");
-                Alternativa01.setText("5");
-                break;    
-        }
+//        switch (ordemPuzzle) {
+//            case 1:
+//                Alternativa01.setText("0");
+//                Alternativa02.setText("0");
+//                Alternativa03.setText("0");
+//                Alternativa04.setText("0");
+//                break;
+//            case 0:
+//                Alternativa01.setText("1");
+//                Alternativa02.setText("1");
+//                Alternativa03.setText("1");
+//                Alternativa04.setText("1");
+//                break;
+//            case 2:
+//                Alternativa01.setText("2");
+//                Alternativa02.setText("2");
+//                Alternativa03.setText("2");
+//                Alternativa04.setText("2");
+//                break;
+//            case 3:
+//                Alternativa01.setText("3");
+//                Alternativa02.setText("3");
+//                Alternativa03.setText("3");
+//                Alternativa04.setText("3");
+//                break;
+//            case 4:
+//                Alternativa01.setText("4");
+//                Alternativa01.setText("4");
+//                Alternativa01.setText("4");
+//                Alternativa01.setText("4");
+//                break;
+//            case 5:
+//                Alternativa01.setText("5");
+//                Alternativa01.setText("5");
+//                Alternativa01.setText("5");
+//                Alternativa01.setText("5");
+//                break;    
+//        }
+//        ordemPuzzle += 1;
     }//GEN-LAST:event_formWindowOpened
 
     /**
@@ -221,6 +271,8 @@ public class TelaPuzzle extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new TelaPuzzle().setVisible(true);
+                
+                
             }
         });
     }

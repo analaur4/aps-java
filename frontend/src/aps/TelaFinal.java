@@ -45,7 +45,8 @@ public class TelaFinal extends javax.swing.JFrame {
             .addComponent(jLabel1)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(478, 366));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
