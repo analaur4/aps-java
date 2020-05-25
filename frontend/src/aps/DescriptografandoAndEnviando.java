@@ -51,11 +51,6 @@ public class DescriptografandoAndEnviando extends javax.swing.JFrame {
                             }
                         }
                         if (testeFracasso == 1){
-//                            fracassou += 1;
-//                            seconds -= 24; //Para fica visivel ao usuário a perca de 30
-//                            jProgressBar1.setValue(-24);
-//                            jProgressBar1.setValue(seconds);
-//                            jProgressBar1.setValue(-14);
                             break;
                         }       
                     }while(janelinhaTeste.isVisible());
@@ -74,16 +69,11 @@ public class DescriptografandoAndEnviando extends javax.swing.JFrame {
                         fracassou += 1;
                     }
              }else if(seconds == 62){
+                 int testeFracasso = 0; //0 = false
                     janelinhaTeste.setVisible(true);
-//                    intervaloSeconds = 2000;
-//                    System.out.println("Agora é " +intervaloSeconds);
                     do {
-//                        timer.scheduleAtFixedRate(task,100,200000);;
-//                        timer.cancel();
-//                        System.out.println();
                         seconds = 62;
                         for(int i=6;i >= 0;i--){
-//                        System.out.println(seconds);
                             janelinhaTeste.jLabel1.setText(i + " segundos restantes");
                             try {                            
                                 Thread.sleep(1000);
@@ -92,34 +82,35 @@ public class DescriptografandoAndEnviando extends javax.swing.JFrame {
                             } 
                             if (janelinhaTeste.isVisible() == false){
                                 break;
+                            }else if (i == 0){
+                                testeFracasso = 1; //1 = true ;
+                                janelinhaTeste.setVisible(false);                                
+                                break;
                             }
                         }
-//                        JOptionPane.showMessageDialog(null,"Tempo esgotado");
-                        if (janelinhaTeste.isVisible() == false){
-                            fracassou += 1;
+                        if (testeFracasso == 1){
                             break;
-                        }                       
+                        }                      
                     }while(janelinhaTeste.isVisible());
-                    ordemPuzzle += 1;
-                    int cont = seconds - 62;
-                    seconds -= cont;
-                        jProgressBar1.setValue(seconds);    
-                    if (acerto == false) {//Usuário Errou
+                    if(acerto == true) {
+                        ordemPuzzle += 1;
+                        int cont = seconds - 62;
+                        seconds -= cont ;
+                        jProgressBar1.setValue(seconds);  
+                    }else if (acerto == false || testeFracasso == 1) {//Usuário Errou
                         seconds -= 27; //Para fica visivel ao usuário a perca de 30
+                        jProgressBar1.setValue(-27);
                         jProgressBar1.setValue(seconds);
+                        jProgressBar1.setValue(-14);
+                        System.out.println("cai aqui no acerto false");
                         fracassou += 1;
                     }             
             }else if (seconds == 92){
+                int testeFracasso = 0; //0 = false
                     janelinhaTeste.setVisible(true);
-//                    intervaloSeconds = 2000;
-//                    System.out.println("Agora é " +intervaloSeconds);
                     do {
-//                        timer.scheduleAtFixedRate(task,100,200000);;
-//                        timer.cancel();
-//                        System.out.println();
                         seconds = 92;
                         for(int i=6;i >= 0;i--){
-//                        System.out.println(seconds);
                             janelinhaTeste.jLabel1.setText(i + " segundos restantes");
                             try {                            
                                 Thread.sleep(1000);
@@ -128,23 +119,29 @@ public class DescriptografandoAndEnviando extends javax.swing.JFrame {
                             } 
                             if (janelinhaTeste.isVisible() == false){
                                 break;
+                            }else if (i == 0){
+                                testeFracasso = 1; //1 = true ;
+                                janelinhaTeste.setVisible(false);                                
+                                break;
                             }
                         }
-//                        JOptionPane.showMessageDialog(null,"Tempo esgotado");
-                        if (janelinhaTeste.isVisible() == false){
-                            fracassou += 1;
+                        if (testeFracasso == 1){
                             break;
                         }                        
                     }while(janelinhaTeste.isVisible());
-                    ordemPuzzle += 1;
-                    int cont = seconds - 92;
-                    seconds -= cont;
-                        jProgressBar1.setValue(seconds);    
-                    if (acerto == false) {//Usuário Errou
-                        seconds -= 20; //Para fica visivel ao usuário a perca de 30
+                    if(acerto == true) {
+                        ordemPuzzle += 1;
+                        int cont = seconds - 92;
+                        seconds -= cont ;
+                        jProgressBar1.setValue(seconds);  
+                    }else if (acerto == false || testeFracasso == 1) {//Usuário Errou
+                        seconds -= 24; //Para fica visivel ao usuário a perca de 30
+                        jProgressBar1.setValue(-24);
                         jProgressBar1.setValue(seconds);
+                        jProgressBar1.setValue(-14);
+                        System.out.println("cai aqui no acerto false");
                         fracassou += 1;
-                    }                       
+                    }                      
             } //fim Condicional If == 32/67/97
                 if (fracassou >= 3){//Caso Usuário tenha Errado 3, terá o fim do jogo iniciado.
                     JOptionPane.showMessageDialog(null,"GAMER OVER < MAN");  
