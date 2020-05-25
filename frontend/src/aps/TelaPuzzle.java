@@ -14,6 +14,9 @@ public class TelaPuzzle extends javax.swing.JFrame {
 
     private boolean teste01;
     private boolean puzzle01;
+    
+
+    
     /**
      * Creates new form TelaPuzzle
      */
@@ -123,7 +126,8 @@ public class TelaPuzzle extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-                 if (Alternativa01.isSelected()){            
+            DescriptografandoAndEnviando Descriptografia = new DescriptografandoAndEnviando();
+        if (Alternativa01.isSelected()){            
             acerto = true;
         }else if (Alternativa02.isSelected()){
             acerto = true;    
@@ -132,7 +136,15 @@ public class TelaPuzzle extends javax.swing.JFrame {
         }else if (Alternativa04.isSelected()){
             acerto = false;    
         }
-        System.out.println(acerto);
+//        System.out.println(acerto);
+//        if (acerto == false) {//Usuário Errou
+//            Descriptografia.seconds -= 24; //Para fica visivel ao usuário a perca de 30
+//            Descriptografia.jProgressBar1.setValue(-24);
+//            System.out.println("cai aqui no acerto false");
+//            Descriptografia.fracassou += 1;
+//        }
+//        System.out.println(Descriptografia.jProgressBar1.getValue());
+        
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 

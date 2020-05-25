@@ -28,20 +28,14 @@ public class DescriptografandoAndEnviando extends javax.swing.JFrame {
             if(seconds > 100){
                 seconds = 100;
             }
-//              jProgressBar1.setValue(seconds);
-//              System.out.println("por padrão é " +intervaloSeconds);
-                jProgressBar1.setValue(seconds);
+            jProgressBar1.setValue(seconds);
+            System.out.println(jProgressBar1.getValue());
             if(seconds == 22){
+                int testeFracasso = 0; //0 = false
                     janelinhaTeste.setVisible(true);
-//                    intervaloSeconds = 2000;
-//                    System.out.println("Agora é " +intervaloSeconds);
                     do {
-//                        timer.scheduleAtFixedRate(task,100,200000);;
-//                        timer.cancel();
-//                        System.out.println();
                         seconds = 22;
                         for(int i=6;i >= 0;i--){
-//                        System.out.println(seconds);
                             janelinhaTeste.jLabel1.setText(i + " segundos restantes");
                             try {                            
                                 Thread.sleep(1000);
@@ -50,25 +44,33 @@ public class DescriptografandoAndEnviando extends javax.swing.JFrame {
                             } 
                             if (janelinhaTeste.isVisible() == false){
                                 break;
+                            }else if (i == 0){
+                                testeFracasso = 1; //1 = true ;
+                                janelinhaTeste.setVisible(false);                                
+                                break;
                             }
                         }
-//                        JOptionPane.showMessageDialog(null,"Tempo esgotado");
-                        if (janelinhaTeste.isVisible() == false){
-                            System.out.println("cai aqui merda");
-                            fracassou += 1;
+                        if (testeFracasso == 1){
+//                            fracassou += 1;
+//                            seconds -= 24; //Para fica visivel ao usuário a perca de 30
+//                            jProgressBar1.setValue(-24);
+//                            jProgressBar1.setValue(seconds);
+//                            jProgressBar1.setValue(-14);
                             break;
-                        }
-//                        janelinhaTeste.setVisible(false);
-//                        fracassou += 1;
-//                        break;                        
+                        }       
                     }while(janelinhaTeste.isVisible());
-                    ordemPuzzle += 1;
-                    int cont = seconds - 22;
-                    seconds -= cont;
-                        jProgressBar1.setValue(seconds);    
-                    if (acerto == false) {//Usuário Errou
+                    if(acerto == true) {
+                        ordemPuzzle += 1;
+                        int cont = seconds - 22;
+                        seconds -= cont ;
+                        jProgressBar1.setValue(seconds);  
+                    }
+                    if (acerto == false || testeFracasso == 1) {//Usuário Errou
                         seconds -= 24; //Para fica visivel ao usuário a perca de 30
+                        jProgressBar1.setValue(-24);
                         jProgressBar1.setValue(seconds);
+                        jProgressBar1.setValue(-14);
+                        System.out.println("cai aqui no acerto false");
                         fracassou += 1;
                     }
              }else if(seconds == 62){
@@ -142,7 +144,7 @@ public class DescriptografandoAndEnviando extends javax.swing.JFrame {
                         seconds -= 20; //Para fica visivel ao usuário a perca de 30
                         jProgressBar1.setValue(seconds);
                         fracassou += 1;
-                    }              
+                    }                       
             } //fim Condicional If == 32/67/97
                 if (fracassou >= 3){//Caso Usuário tenha Errado 3, terá o fim do jogo iniciado.
                     JOptionPane.showMessageDialog(null,"GAMER OVER < MAN");  
@@ -152,9 +154,8 @@ public class DescriptografandoAndEnviando extends javax.swing.JFrame {
                     Logger.getLogger(DescriptografandoAndEnviando.class.getName()).log(Level.SEVERE, null, ex);
                 }
                     System.exit(0);
-                }//Fim Condicional fracassou
-        }
-        
+                }//Fim Condicional fracassou                
+        }        
     };    
 //    int intervaloSeconds = 500 ;
     public void start(){
@@ -211,7 +212,6 @@ public class DescriptografandoAndEnviando extends javax.swing.JFrame {
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
             start();
-//            functionLg();
     }//GEN-LAST:event_formWindowOpened
 
     /**
@@ -250,62 +250,7 @@ public class DescriptografandoAndEnviando extends javax.swing.JFrame {
     }    
                 public void functionLg() {
                     for(int i = 0; i <= 100; i++){
-//                        seconds = 0;
-//                        for (int j=0; j <= 20; j++){
-////                            start();
-////                            System.out.println(seconds);
-////                            if(seconds == 20){
-////                                break;
-////                            }
-//                        }
-//                        System.out.println("meu primeiro For é" + i);
-//                        jProgressBar1.setValue(i);
-                    }
-//        try {
-//                //Preciso saber quando ele fechou o puzzle => janelinhaTeste.isVisible()
-//                //E se errou ou acertou => boolean teste
-////                seconds++;
-//                for (int j = 0; j < 5; j++) {
-//                 jProgressBar1.setValue(j);                   
-//                }
-////                jProgressBar1.setValue(seconds);
-//                if(jProgressBar1.getValue() == 32){//começo Condicional If == 32
-//                    janelinhaTeste.setVisible(true);
-//                    do {
-//                        System.out.println("");
-//                    }while(janelinhaTeste.isVisible());
-//                    if (acerto == false) {//Usuário Errou
-//                        jProgressBar1.setValue(-30);
-//                        fracassou += 1 ;
-//                    }             
-//                }else if(jProgressBar1.getValue() == 67){
-//                    janelinhaTeste.setVisible(true);
-//                    do {
-//                        System.out.println("");
-//                    }while(janelinhaTeste.isVisible());
-//                    if (acerto == false) {//Usuário Errou
-//                        jProgressBar1.setValue(-30);
-//                        fracassou += 1;
-//                    }                     
-//                }else if(jProgressBar1.getValue() == 97){
-//                    janelinhaTeste.setVisible(true);
-//                    do {
-//                        System.out.println("");
-//                    }while(janelinhaTeste.isVisible());
-//                    if (acerto == false) {//Usuário Errou
-//                        jProgressBar1.setValue(-30);
-//                        fracassou += 1;
-//                    }                  
-//                } //fim Condicional If == 32/67/97
-//                if (fracassou >= 3){//Caso Usuário tenha Errado 3, terá o fim do jogo iniciado.
-//                    JOptionPane.showMessageDialog(null,"GAMER OVER < MAN");  
-//                    Thread.sleep(2000);
-//                    System.exit(0);
-//                }//Fim Condicional fracassou
-//        } catch (Exception e){
-//            JOptionPane.showMessageDialog(null,"Erro no Carregamento, O jogo será Fechado");
-//            System.exit(0);
-//        }//Fim Try - Catch             
+                    }           
         }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
