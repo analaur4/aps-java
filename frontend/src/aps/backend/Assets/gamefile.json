@@ -132,7 +132,7 @@
     "message": "Sim, entrei e tenho muitos contatos proximos, assim como estou falando com você agora, cada um com suas habilidades que necessito, e você tem uma habilidade que preciso e muito agora. Bom tenho certeza que você irá me ajudar, afinal o assunto em questão vai muito mais fundo que você pensar. envolvendo até mesmo sua filha.",
     "name": "Hermia",
     "options": [
-      "Tudo irei te ajudar",
+      "Tudo bem irei te ajudar",
       "como sabe sobre a minha filha?",
       "O acidente de minha filha foi de minha responsabilidade"
     ],
@@ -180,7 +180,7 @@
     "message": "Beleza, vamos começar já com isso. Estou enviando o arquivo.",
     "name": "Hermia",
     "options": [
-      "Arquivo Descriptografado!",
+      "",
       "",
       ""
     ],
@@ -425,7 +425,7 @@
   },
   "28":{
     "previous":"",
-    "message":"Quero mostrar ninguém tem direito de tirar tudo da natureza, nada dura para sempre, além disso todas as coisa que passam pelo caminho deles, animais, floresta, todos tem direito a vida.",
+    "message":"Quero mostrar que ninguém tem direito de tirar tudo da natureza, nada dura para sempre, além disso todas as coisa que passam pelo caminho deles, animais, floresta, todos tem direito a vida.",
     "name":"Hermia",
     "options":[
       "Ok, você é uma ativista. Irei enviar o email.",
@@ -461,8 +461,8 @@
       "Cansei dessa brincadeira."
     ],
     "path":[
-      "30",
-      "30",
+      "31",
+      "31",
       "29"
     ],
     "event":1
@@ -470,6 +470,7 @@
   "31":{
     "previous":"30",
     "message":"Sou Hérmia, Pachamama, Gaia, Ísis, a mãe natureza, eu estava a ponto de destruir a terra, mas resolvi escutar o pedido de uma de minhas filhas, que te indicou para que pudesse me ajudar.",
+    "name":"Hermia",
     "options":[
       "Por que eu?",
       "Quem?",
@@ -484,7 +485,8 @@
   },
   "32":{
     "previous":"31",
-    "message":"Sim, sua filha, ela está junto de mim. Ela respeitou e cuidou de minha criação durante a vida. A pedido dela te escolhi para espalhar a justiça pelo mundo e salvar a humanidade.  O mundo vive um sistema parasita, onde ricos vivem as custas da destruição de todo tipo de vida na Terra.",
+    "message":"Sua filha, ela está junto de mim. Ela respeitou e cuidou de minha criação durante a vida. A pedido dela te escolhi para espalhar a justiça pelo mundo e salvar a humanidade.  O mundo vive um sistema parasita, onde ricos vivem as custas da destruição de todo tipo de vida na Terra.",
+    "name":"Hermia",
     "options":[
       "Estou com você.",
       "Muito obrigado por confiar em mim.",
@@ -500,8 +502,17 @@
   "33":{
     "previous":"31",
     "message":"Muito obrigado por jogar.",
-    "options":[],
-    "path":[],
+    "name":"Hermia",
+    "options":[
+        "",
+        "",
+        ""
+    ],
+    "path":[
+        "",
+        "",
+        ""
+    ],
     "event":5
   }
 }

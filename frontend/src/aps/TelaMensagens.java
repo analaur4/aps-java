@@ -17,6 +17,8 @@ public class TelaMensagens extends javax.swing.JFrame {
     JsonHandler jsonHandler = new JsonHandler();
     JSONObject objJSON = jsonHandler.initialize();
     JSONObject newObjJSON = objJSON;
+    TelaGameOver gameOver = new TelaGameOver();
+    TelaEmail email = new TelaEmail();
     
     /**
      * Creates new form Desktop
@@ -48,24 +50,21 @@ public class TelaMensagens extends javax.swing.JFrame {
     public void alterEvent() {
         if (null != newObjJSON.get("event")) switch (newObjJSON.getInt("event")) {
             case 0:
-                JOptionPane.showMessageDialog(this,"GAME OVER");
-                System.exit(0);
+                gameOver.setVisible(true);
                 break;
             case 3:
                 JOptionPane.showMessageDialog(this,"Descriptografar");
-                Alternativa01.doClick();
-                btn__Enviar.doClick();
-                txt__mensagger.setText(txt__mensagger.getText() + nameUser + "\n" +
-                    newObjJSON.getJSONArray("options").getString(0) + "\n\n");
                 newObjJSON = jsonHandler.nextScene(newObjJSON.getJSONArray("path").getString(0));
                 alterOptions();
                 break;
             case 4:
-                JOptionPane.showMessageDialog(this,"Enviar e-mails");
+                email.setVisible(true);
                 newObjJSON = jsonHandler.nextScene(newObjJSON.getJSONArray("path").getString(0));
+                alterOptions();
                 break;
             case 5:
                 JOptionPane.showMessageDialog(this,"Créditos");
+                System.exit(0);
                 break;
             default:
                 break;
@@ -176,7 +175,7 @@ public class TelaMensagens extends javax.swing.JFrame {
             newObjJSON = jsonHandler.nextScene(newObjJSON.getJSONArray("path").getString(1));
             alterOptions();
             alterEvent();
-                        
+
         }else if(Alternativa03.isSelected()){
             txt__mensagger.setText(txt__mensagger.getText() + nameUser + "\n" +
             newObjJSON.getJSONArray("options").getString(2) + "\n\n");
@@ -191,6 +190,9 @@ public class TelaMensagens extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+//                NewClass MainPrincipal = new NewClass();
+        //Chamando método que está localizado no nosso MainPrincipal
+//        MainPrincipal.instacimanetoPuzzle();
         System.exit(0);
     }//GEN-LAST:event_jButton1ActionPerformed
 
