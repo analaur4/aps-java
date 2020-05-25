@@ -250,7 +250,7 @@ public class TelaNewUser extends javax.swing.JFrame {
         // TODO add your handling code here:
         nameUser = input__nome.getText();
         this.setVisible(false);
-        new TelaCapitulos().setVisible(true);       
+        new TelaDesktop().setVisible(true);       
     }//GEN-LAST:event_btn__salvarMouseClicked
 
     //Label invisible que irá possibilitar ao clickar o efeito de Exit
