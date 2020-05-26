@@ -5,6 +5,8 @@
  */
 package aps;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author UnGui
@@ -16,6 +18,9 @@ public class TelaFinal extends javax.swing.JFrame {
      */
     public TelaFinal() {
         initComponents();
+        ImageIcon imageLbl = new ImageIcon("src/aps/image/planetaFeliz.png");
+        imageLbl.setImage(imageLbl.getImage().getScaledInstance(422, 291, 1));
+        lblImage.setIcon(imageLbl);
     }
 
     /**
@@ -27,23 +32,28 @@ public class TelaFinal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
+        lblImage = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(153, 255, 153));
         setUndecorated(true);
+        getContentPane().setLayout(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/ThatsAllFolksGif_91cb8a1d-5b2e-4f2c-83d9-1540abafd6c3.gif"))); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 0, 36)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Obrigado por jogar!");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(10, 0, 440, 58);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1)
-        );
+        lblImage.setBackground(new java.awt.Color(153, 255, 153));
+        getContentPane().add(lblImage);
+        lblImage.setBounds(28, 64, 422, 291);
+
+        jLabel1.setBackground(new java.awt.Color(153, 255, 153));
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 480, 370);
 
         setSize(new java.awt.Dimension(478, 366));
         setLocationRelativeTo(null);
@@ -86,5 +96,7 @@ public class TelaFinal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel lblImage;
     // End of variables declaration//GEN-END:variables
 }

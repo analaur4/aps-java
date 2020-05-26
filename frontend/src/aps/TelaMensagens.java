@@ -19,6 +19,7 @@ public class TelaMensagens extends javax.swing.JFrame {
     JSONObject newObjJSON = objJSON;
     TelaGameOver gameOver = new TelaGameOver();
     TelaEmail email = new TelaEmail();
+    Descriptografia descriptografia = new Descriptografia();
     
     /**
      * Creates new form Desktop
@@ -53,14 +54,18 @@ public class TelaMensagens extends javax.swing.JFrame {
                 gameOver.setVisible(true);
                 break;
             case 3:
-                JOptionPane.showMessageDialog(this,"Descriptografar");
-                newObjJSON = jsonHandler.nextScene(newObjJSON.getJSONArray("path").getString(0));
-                alterOptions();
+                descriptografia.setVisible(true);
+                if (!descriptografia.isVisible()) {
+                    newObjJSON = jsonHandler.nextScene(newObjJSON.getJSONArray("path").getString(0));
+                    alterOptions();
+                }
                 break;
             case 4:
                 email.setVisible(true);
-                newObjJSON = jsonHandler.nextScene(newObjJSON.getJSONArray("path").getString(0));
-                alterOptions();
+                if (!email.isVisible()) {
+                    newObjJSON = jsonHandler.nextScene(newObjJSON.getJSONArray("path").getString(0));
+                    alterOptions();
+                }
                 break;
             case 5:
                 JOptionPane.showMessageDialog(this,"Créditos");

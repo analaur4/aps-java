@@ -63,7 +63,7 @@ public class NewClass {
     public void instacimanetoPuzzle() {
 
         
-        DescriptografandoAndEnviando obj = new DescriptografandoAndEnviando();
+        Descriptografia obj = new Descriptografia();
         TelaPuzzle janelinhaTeste = new TelaPuzzle();
         obj.setVisible(true);
         
