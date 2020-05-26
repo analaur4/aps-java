@@ -27,6 +27,7 @@ public class TelaPuzzle extends javax.swing.JFrame {
         ImageIcon imageLbl = new ImageIcon("src/aps/image/lousa.png");
         imageLbl.setImage(imageLbl.getImage().getScaledInstance(430, 300, 1));
         lblImage.setIcon(imageLbl);
+        groupBtnAlternative.clearSelection();
     }
 
     /**
@@ -39,7 +40,6 @@ public class TelaPuzzle extends javax.swing.JFrame {
     private void initComponents() {
 
         groupBtnAlternative = new javax.swing.ButtonGroup();
-        btn_responder = new javax.swing.JButton();
         Alternativa01 = new javax.swing.JRadioButton();
         Alternativa02 = new javax.swing.JRadioButton();
         Alternativa03 = new javax.swing.JRadioButton();
@@ -59,16 +59,6 @@ public class TelaPuzzle extends javax.swing.JFrame {
             }
         });
         getContentPane().setLayout(null);
-
-        btn_responder.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        btn_responder.setText("RESPONDER");
-        btn_responder.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_responderActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btn_responder);
-        btn_responder.setBounds(166, 234, 107, 36);
 
         groupBtnAlternative.add(Alternativa01);
         Alternativa01.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
@@ -136,79 +126,6 @@ public class TelaPuzzle extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_responderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_responderActionPerformed
-        // TODO add your handling code here:
-        if (Alternativa01.isSelected()){ 
-            System.out.println("01");
-            acerto = true;
-        }else if (Alternativa02.isSelected()){
-            System.out.println("02");
-            acerto = true;
-        }else if (Alternativa03.isSelected()){
-            System.out.println("03");
-            acerto = true;
-        }else if (Alternativa04.isSelected()){
-            System.out.println("04");
-            acerto = true;
-        }
-        
-        
-        
-        System.out.println(acerto);
-        this.setVisible(false);
-//        switch (ordemPuzzle) {
-//            case 0:
-//                if (Alternativa03.isSelected()){         
-//                    acerto = true;
-//                }else {
-//                    acerto = false;
-//                }        
-//                this.setVisible(false);
-//                break;
-//            case 1:
-//                if (Alternativa02.isSelected()){            
-//                    acerto = true;
-//                }else {
-//                    acerto = false;    
-//                }        
-//                this.setVisible(false);
-//                break;
-//            case 2:
-//                if (Alternativa04.isSelected()){            
-//                    acerto = true;
-//                }else {
-//                    acerto = false;    
-//                }        
-//                this.setVisible(false);
-//                break;
-//            case 3:
-//                if (Alternativa02.isSelected()){            
-//                    acerto = true;
-//                }else {
-//                    acerto = false;    
-//                }        
-//                this.setVisible(false);
-//                break;
-//            case 4:
-//                if (Alternativa03.isSelected()){            
-//                    acerto = true;
-//                }else {
-//                    acerto = false;    
-//                }        
-//                this.setVisible(false);
-//                break;
-//            case 5:
-//                if (Alternativa04.isSelected()){            
-//                    acerto = true;
-//                }else {
-//                    acerto = false;    
-//                }        
-//                this.setVisible(false);
-//                break;
-//        }
-//        groupBtnAlternative.clearSelection();
-    }//GEN-LAST:event_btn_responderActionPerformed
-
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
 
@@ -225,6 +142,7 @@ public class TelaPuzzle extends javax.swing.JFrame {
                 Alternativa04.setText("22");
                 break;
             case 1:
+                groupBtnAlternative.clearSelection();
                 lbl_tituloQuest.setText("7 + 4 = ?");
                 Alternativa01.setText("9");
                 Alternativa02.setText("11");
@@ -232,6 +150,7 @@ public class TelaPuzzle extends javax.swing.JFrame {
                 Alternativa04.setText("13");
                 break;
             case 2:
+                groupBtnAlternative.clearSelection();
                 lbl_tituloQuest.setText("5 x 7 = ?");
                 Alternativa01.setText("35");
                 Alternativa02.setText("25");
@@ -239,6 +158,7 @@ public class TelaPuzzle extends javax.swing.JFrame {
                 Alternativa04.setText("30");
                 break;
             case 3:
+                groupBtnAlternative.clearSelection();
                 lbl_tituloQuest.setText("24 / 8 = ?");
                 Alternativa01.setText("2");
                 Alternativa02.setText("3");
@@ -246,6 +166,7 @@ public class TelaPuzzle extends javax.swing.JFrame {
                 Alternativa04.setText("8");
                 break;
             case 4:
+                groupBtnAlternative.clearSelection();
                 lbl_tituloQuest.setText("37 - 28 = ?");
                 Alternativa01.setText("12");
                 Alternativa02.setText("9");
@@ -253,6 +174,7 @@ public class TelaPuzzle extends javax.swing.JFrame {
                 Alternativa04.setText("8");
                 break;
             case 5:
+                groupBtnAlternative.clearSelection();
                 lbl_tituloQuest.setText("50 - 10 = ?");
                 Alternativa01.setText("50");
                 Alternativa02.setText("20");
@@ -422,7 +344,6 @@ public class TelaPuzzle extends javax.swing.JFrame {
     private javax.swing.JRadioButton Alternativa02;
     private javax.swing.JRadioButton Alternativa03;
     private javax.swing.JRadioButton Alternativa04;
-    private javax.swing.JButton btn_responder;
     private javax.swing.ButtonGroup groupBtnAlternative;
     public javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblImage;

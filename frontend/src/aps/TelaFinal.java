@@ -34,7 +34,8 @@ public class TelaFinal extends javax.swing.JFrame {
 
         jLabel2 = new javax.swing.JLabel();
         lblImage = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        btn_sair = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 255, 153));
@@ -51,13 +52,29 @@ public class TelaFinal extends javax.swing.JFrame {
         getContentPane().add(lblImage);
         lblImage.setBounds(28, 64, 422, 291);
 
-        jLabel1.setBackground(new java.awt.Color(153, 255, 153));
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 480, 370);
+        btn_sair.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        btn_sair.setText("Finalizar");
+        btn_sair.setToolTipText("");
+        btn_sair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_sairActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_sair);
+        btn_sair.setBounds(353, 333, 120, 30);
+
+        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel1.setForeground(new java.awt.Color(102, 255, 102));
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 480, 370);
 
         setSize(new java.awt.Dimension(478, 366));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_sairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sairActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btn_sairActionPerformed
 
     /**
      * @param args the command line arguments
@@ -95,8 +112,9 @@ public class TelaFinal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btn_sair;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblImage;
     // End of variables declaration//GEN-END:variables
 }
