@@ -19,6 +19,7 @@ public class TelaMensagens extends javax.swing.JFrame {
     JSONObject newObjJSON = objJSON;
     TelaGameOver gameOver = new TelaGameOver();
     TelaEmail email = new TelaEmail();
+    Descriptografia descriptografia = new Descriptografia();
     
     /**
      * Creates new form Desktop
@@ -53,14 +54,18 @@ public class TelaMensagens extends javax.swing.JFrame {
                 gameOver.setVisible(true);
                 break;
             case 3:
-                JOptionPane.showMessageDialog(this,"Descriptografar");
-                newObjJSON = jsonHandler.nextScene(newObjJSON.getJSONArray("path").getString(0));
-                alterOptions();
+                descriptografia.setVisible(true);
+                if (!descriptografia.isVisible()) {
+                    newObjJSON = jsonHandler.nextScene(newObjJSON.getJSONArray("path").getString(0));
+                    alterOptions();
+                }
                 break;
             case 4:
                 email.setVisible(true);
-                newObjJSON = jsonHandler.nextScene(newObjJSON.getJSONArray("path").getString(0));
-                alterOptions();
+                if (!email.isVisible()) {
+                    newObjJSON = jsonHandler.nextScene(newObjJSON.getJSONArray("path").getString(0));
+                    alterOptions();
+                }
                 break;
             case 5:
                 JOptionPane.showMessageDialog(this,"Créditos");
@@ -83,7 +88,6 @@ public class TelaMensagens extends javax.swing.JFrame {
         AnswerGroup = new javax.swing.ButtonGroup();
         url__profile = new javax.swing.JLabel();
         btn__Enviar = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         Alternativa03 = new javax.swing.JRadioButton();
         Alternativa02 = new javax.swing.JRadioButton();
         Alternativa01 = new javax.swing.JRadioButton();
@@ -100,7 +104,7 @@ public class TelaMensagens extends javax.swing.JFrame {
         setType(java.awt.Window.Type.POPUP);
         getContentPane().setLayout(null);
         getContentPane().add(url__profile);
-        url__profile.setBounds(30, 400, 150, 120);
+        url__profile.setBounds(30, 380, 170, 140);
 
         btn__Enviar.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btn__Enviar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aps/image/btn__enviar.png"))); // NOI18N
@@ -111,34 +115,25 @@ public class TelaMensagens extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btn__Enviar);
-        btn__Enviar.setBounds(790, 420, 100, 70);
-
-        jButton1.setText("Fechar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(760, 390, 150, 23);
+        btn__Enviar.setBounds(890, 420, 100, 70);
 
         AnswerGroup.add(Alternativa03);
         Alternativa03.setText("Resposta C");
         Alternativa03.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(Alternativa03);
-        Alternativa03.setBounds(220, 480, 510, 23);
+        Alternativa03.setBounds(210, 480, 670, 23);
 
         AnswerGroup.add(Alternativa02);
         Alternativa02.setText("Resposta B");
         Alternativa02.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(Alternativa02);
-        Alternativa02.setBounds(220, 440, 510, 23);
+        Alternativa02.setBounds(210, 440, 670, 23);
 
         AnswerGroup.add(Alternativa01);
         Alternativa01.setText("Resposta A");
         Alternativa01.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(Alternativa01);
-        Alternativa01.setBounds(220, 400, 510, 23);
+        Alternativa01.setBounds(210, 400, 670, 23);
 
         txt__mensagger.setEditable(false);
         txt__mensagger.setColumns(20);
@@ -188,14 +183,6 @@ public class TelaMensagens extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btn__EnviarActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-//                NewClass MainPrincipal = new NewClass();
-        //Chamando método que está localizado no nosso MainPrincipal
-//        MainPrincipal.instacimanetoPuzzle();
-        System.exit(0);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -238,7 +225,6 @@ public class TelaMensagens extends javax.swing.JFrame {
     private javax.swing.JRadioButton Alternativa03;
     private javax.swing.ButtonGroup AnswerGroup;
     private javax.swing.JButton btn__Enviar;
-    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel layout__mensegger;
     private javax.swing.JTextArea txt__mensagger;

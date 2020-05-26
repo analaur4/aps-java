@@ -1,11 +1,12 @@
-/*
+    /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package aps;
-import static aps.DescriptografandoAndEnviando.acerto;
-import static aps.DescriptografandoAndEnviando.ordemPuzzle;
+import static aps.Descriptografia.acerto;
+import static aps.Descriptografia.ordemPuzzle;
+import javax.swing.ImageIcon;
 /**
  *
  * @author UnGui
@@ -14,11 +15,18 @@ public class TelaPuzzle extends javax.swing.JFrame {
 
     private boolean teste01;
     private boolean puzzle01;
+    
+
+    
     /**
      * Creates new form TelaPuzzle
      */
     public TelaPuzzle() {
+        initComponents();     
         initComponents();
+        ImageIcon imageLbl = new ImageIcon("src/aps/image/lousa.png");
+        imageLbl.setImage(imageLbl.getImage().getScaledInstance(430, 300, 1));
+        lblImage.setIcon(imageLbl);
     }
 
     /**
@@ -30,153 +38,201 @@ public class TelaPuzzle extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
-        jButton1 = new javax.swing.JButton();
+        groupBtnAlternative = new javax.swing.ButtonGroup();
+        btn_responder = new javax.swing.JButton();
         Alternativa01 = new javax.swing.JRadioButton();
         Alternativa02 = new javax.swing.JRadioButton();
         Alternativa03 = new javax.swing.JRadioButton();
         Alternativa04 = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
         lbl_tituloQuest = new javax.swing.JLabel();
+        lblImage = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
             }
         });
+        getContentPane().setLayout(null);
 
-        jButton1.setText("RESPONDE");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_responder.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btn_responder.setText("RESPONDER");
+        btn_responder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_responderActionPerformed(evt);
             }
         });
+        getContentPane().add(btn_responder);
+        btn_responder.setBounds(166, 234, 107, 36);
 
-        buttonGroup1.add(Alternativa01);
-        Alternativa01.setText("true");
+        groupBtnAlternative.add(Alternativa01);
+        Alternativa01.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        Alternativa01.setForeground(new java.awt.Color(255, 255, 255));
+        Alternativa01.setOpaque(false);
+        getContentPane().add(Alternativa01);
+        Alternativa01.setBounds(54, 136, 60, 20);
 
-        buttonGroup1.add(Alternativa02);
-        Alternativa02.setText("true");
+        groupBtnAlternative.add(Alternativa02);
+        Alternativa02.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        Alternativa02.setForeground(new java.awt.Color(255, 255, 255));
+        Alternativa02.setOpaque(false);
+        getContentPane().add(Alternativa02);
+        Alternativa02.setBounds(54, 193, 60, 20);
 
-        buttonGroup1.add(Alternativa03);
-        Alternativa03.setText("false");
+        groupBtnAlternative.add(Alternativa03);
+        Alternativa03.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        Alternativa03.setForeground(new java.awt.Color(255, 255, 255));
+        Alternativa03.setOpaque(false);
+        getContentPane().add(Alternativa03);
+        Alternativa03.setBounds(317, 136, 70, 20);
 
-        buttonGroup1.add(Alternativa04);
-        Alternativa04.setText("false");
+        groupBtnAlternative.add(Alternativa04);
+        Alternativa04.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        Alternativa04.setForeground(new java.awt.Color(255, 255, 255));
+        Alternativa04.setOpaque(false);
+        getContentPane().add(Alternativa04);
+        Alternativa04.setBounds(317, 193, 70, 20);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel1.setText("0 %");
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(160, 0, 250, 40);
 
-        lbl_tituloQuest.setText("jLabel2");
+        lbl_tituloQuest.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
+        lbl_tituloQuest.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_tituloQuest.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(lbl_tituloQuest);
+        lbl_tituloQuest.setBounds(54, 46, 322, 33);
+        getContentPane().add(lblImage);
+        lblImage.setBounds(0, 0, 430, 300);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(157, 157, 157))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Alternativa02)
-                    .addComponent(Alternativa01))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Alternativa03)
-                    .addComponent(Alternativa04))
-                .addGap(64, 64, 64))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(87, 87, 87)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addComponent(lbl_tituloQuest, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(54, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(lbl_tituloQuest, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Alternativa01)
-                    .addComponent(Alternativa03))
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Alternativa02)
-                    .addComponent(Alternativa04))
-                .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30))
-        );
-
-        pack();
+        setSize(new java.awt.Dimension(430, 300));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_responderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_responderActionPerformed
         // TODO add your handling code here:
-                 if (Alternativa01.isSelected()){            
-            acerto = true;
+        if (Alternativa01.isSelected()){ 
+            acerto = false;
         }else if (Alternativa02.isSelected()){
-            acerto = true;    
+            acerto = false;
         }else if (Alternativa03.isSelected()){
-            acerto = false;   
+            acerto = true;
         }else if (Alternativa04.isSelected()){
-            acerto = false;    
+            acerto = false;
         }
         System.out.println(acerto);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+//        switch (ordemPuzzle) {
+//            case 0:
+//                if (Alternativa03.isSelected()){         
+//                    acerto = true;
+//                }else {
+//                    acerto = false;
+//                }        
+//                this.setVisible(false);
+//                break;
+//            case 1:
+//                if (Alternativa02.isSelected()){            
+//                    acerto = true;
+//                }else {
+//                    acerto = false;    
+//                }        
+//                this.setVisible(false);
+//                break;
+//            case 2:
+//                if (Alternativa04.isSelected()){            
+//                    acerto = true;
+//                }else {
+//                    acerto = false;    
+//                }        
+//                this.setVisible(false);
+//                break;
+//            case 3:
+//                if (Alternativa02.isSelected()){            
+//                    acerto = true;
+//                }else {
+//                    acerto = false;    
+//                }        
+//                this.setVisible(false);
+//                break;
+//            case 4:
+//                if (Alternativa03.isSelected()){            
+//                    acerto = true;
+//                }else {
+//                    acerto = false;    
+//                }        
+//                this.setVisible(false);
+//                break;
+//            case 5:
+//                if (Alternativa04.isSelected()){            
+//                    acerto = true;
+//                }else {
+//                    acerto = false;    
+//                }        
+//                this.setVisible(false);
+//                break;
+//        }
+        groupBtnAlternative.clearSelection();
+    }//GEN-LAST:event_btn_responderActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowOpened
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        // TODO add your handling code here:
         switch (ordemPuzzle) {
             case 0:
-                Alternativa01.setText("0");
-                Alternativa02.setText("0");
-                Alternativa03.setText("0");
-                Alternativa04.setText("0");
+                lbl_tituloQuest.setText("2 + 2 = ?");
+                Alternativa01.setText("1");
+                Alternativa02.setText("3");
+                Alternativa03.setText("4");
+                Alternativa04.setText("22");
                 break;
             case 1:
-                Alternativa01.setText("1");
-                Alternativa02.setText("1");
-                Alternativa03.setText("1");
-                Alternativa04.setText("1");
+                lbl_tituloQuest.setText("7 + 4 = ?");
+                Alternativa01.setText("9");
+                Alternativa02.setText("74");
+                Alternativa03.setText("11");
+                Alternativa04.setText("13");
                 break;
             case 2:
-                Alternativa01.setText("2");
-                Alternativa02.setText("2");
-                Alternativa03.setText("2");
-                Alternativa04.setText("2");
+                lbl_tituloQuest.setText("5 x 7 = ?");
+                Alternativa01.setText("57");
+                Alternativa02.setText("25");
+                Alternativa03.setText("35");
+                Alternativa04.setText("30");
                 break;
             case 3:
-                Alternativa01.setText("3");
-                Alternativa02.setText("3");
+                lbl_tituloQuest.setText("24 / 8 = ?");
+                Alternativa01.setText("2");
+                Alternativa02.setText("4");
                 Alternativa03.setText("3");
-                Alternativa04.setText("3");
+                Alternativa04.setText("8");
                 break;
             case 4:
-                Alternativa01.setText("4");
-                Alternativa01.setText("4");
-                Alternativa01.setText("4");
-                Alternativa01.setText("4");
+                lbl_tituloQuest.setText("37 - 28 = ?");
+                Alternativa01.setText("12");
+                Alternativa02.setText("11");
+                Alternativa03.setText("9");
+                Alternativa04.setText("8");
                 break;
             case 5:
-                Alternativa01.setText("5");
-                Alternativa01.setText("5");
-                Alternativa01.setText("5");
-                Alternativa01.setText("5");
+                lbl_tituloQuest.setText("50 - 10 = ?");
+                Alternativa01.setText("50");
+                Alternativa02.setText("20");
+                Alternativa03.setText("40");
+                Alternativa04.setText("10");
                 break;    
         }
-    }//GEN-LAST:event_formWindowOpened
+    }//GEN-LAST:event_formWindowActivated
 
     /**
      * @param args the command line arguments
@@ -218,9 +274,10 @@ public class TelaPuzzle extends javax.swing.JFrame {
     private javax.swing.JRadioButton Alternativa02;
     private javax.swing.JRadioButton Alternativa03;
     private javax.swing.JRadioButton Alternativa04;
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btn_responder;
+    private javax.swing.ButtonGroup groupBtnAlternative;
     public javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel lblImage;
     private javax.swing.JLabel lbl_tituloQuest;
     // End of variables declaration//GEN-END:variables
 }
