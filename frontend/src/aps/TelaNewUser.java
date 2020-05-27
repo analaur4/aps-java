@@ -271,7 +271,7 @@ public class TelaNewUser extends javax.swing.JFrame {
     }//GEN-LAST:event_icon__userNewMouseClicked
 
     private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
-        NewClass dadosUsuario = new NewClass(); 
+        ClassMain dadosUsuario = new ClassMain(); 
 //      Aqui estamos colocando o valor salvo na Variavel Global / TelaINICIAL
         ImageIcon newProfile = new ImageIcon(profileURL);
         //Modificando o Icon

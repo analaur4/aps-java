@@ -9,7 +9,7 @@ import javax.swing.Timer;
  *
  * @author UnGui
  */
-public class NewClass {
+public class ClassMain {
     public static void main(String args[]) {
         //Instanciando a Tela Splash.
         SplashScreen obj = new SplashScreen();

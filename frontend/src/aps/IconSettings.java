@@ -244,7 +244,7 @@ public class IconSettings extends javax.swing.JFrame {
     //Event ao clickar btn Salvar
     private void btn__salvarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn__salvarMouseClicked
         //Instaciando Classe
-        NewClass dadosUsuario = new NewClass();
+        ClassMain dadosUsuario = new ClassMain();
         //Pegando o Caminho do Icon do previewProfile.
         previewProfile.getIcon();
         //Agora estamos mandando o novo Icon para Classe Dados Usuário
