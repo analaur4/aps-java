@@ -27,6 +27,7 @@ public class TelaPuzzle extends javax.swing.JFrame {
         ImageIcon imageLbl = new ImageIcon("src/aps/image/lousa.png");
         imageLbl.setImage(imageLbl.getImage().getScaledInstance(430, 300, 1));
         lblImage.setIcon(imageLbl);
+        groupBtnAlternative.clearSelection();
     }
 
     /**
@@ -141,6 +142,7 @@ public class TelaPuzzle extends javax.swing.JFrame {
                 Alternativa04.setText("22");
                 break;
             case 1:
+                groupBtnAlternative.clearSelection();
                 lbl_tituloQuest.setText("7 + 4 = ?");
                 Alternativa01.setText("9");
                 Alternativa02.setText("11");
@@ -148,6 +150,7 @@ public class TelaPuzzle extends javax.swing.JFrame {
                 Alternativa04.setText("13");
                 break;
             case 2:
+                groupBtnAlternative.clearSelection();
                 lbl_tituloQuest.setText("5 x 7 = ?");
                 Alternativa01.setText("35");
                 Alternativa02.setText("25");
@@ -155,6 +158,7 @@ public class TelaPuzzle extends javax.swing.JFrame {
                 Alternativa04.setText("30");
                 break;
             case 3:
+                groupBtnAlternative.clearSelection();
                 lbl_tituloQuest.setText("24 / 8 = ?");
                 Alternativa01.setText("2");
                 Alternativa02.setText("3");
@@ -162,6 +166,7 @@ public class TelaPuzzle extends javax.swing.JFrame {
                 Alternativa04.setText("8");
                 break;
             case 4:
+                groupBtnAlternative.clearSelection();
                 lbl_tituloQuest.setText("37 - 28 = ?");
                 Alternativa01.setText("12");
                 Alternativa02.setText("9");
@@ -169,6 +174,7 @@ public class TelaPuzzle extends javax.swing.JFrame {
                 Alternativa04.setText("8");
                 break;
             case 5:
+                groupBtnAlternative.clearSelection();
                 lbl_tituloQuest.setText("50 - 10 = ?");
                 Alternativa01.setText("50");
                 Alternativa02.setText("20");

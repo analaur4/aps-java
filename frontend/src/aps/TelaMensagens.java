@@ -20,6 +20,7 @@ public class TelaMensagens extends javax.swing.JFrame {
     TelaGameOver gameOver = new TelaGameOver();
     TelaEmail email = new TelaEmail();
     Descriptografia descriptografia = new Descriptografia();
+    TelaFinal creditos = new TelaFinal();
     
     /**
      * Creates new form Desktop
@@ -54,6 +55,7 @@ public class TelaMensagens extends javax.swing.JFrame {
                 gameOver.setVisible(true);
                 break;
             case 3:
+                JOptionPane.showMessageDialog(this, "Descriptografar Arquivo");
                 descriptografia.setVisible(true);
                 if (!descriptografia.isVisible()) {
                     newObjJSON = jsonHandler.nextScene(newObjJSON.getJSONArray("path").getString(0));
@@ -68,8 +70,7 @@ public class TelaMensagens extends javax.swing.JFrame {
                 }
                 break;
             case 5:
-                JOptionPane.showMessageDialog(this,"Créditos");
-                System.exit(0);
+                creditos.setVisible(true);
                 break;
             default:
                 break;
